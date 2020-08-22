@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "umi dev",
+		"start": "cross-env PORT=3000 umi dev",
 		"build": "umi build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

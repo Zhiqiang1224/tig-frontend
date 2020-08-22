@@ -21,5 +21,7 @@ export default {
 			path: "/",
 			component: "HomePage/index"
 		}
-	]
+	],
+	outputPath:'build'
+
 };
