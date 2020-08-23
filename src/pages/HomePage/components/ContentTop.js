@@ -54,10 +54,10 @@ export default class ContentTop extends React.Component {
 								<div className={style.category}>RÉSERVEZ EN LIGNE</div>
 							</Col>
 						</Row>
-						<q className={style.content} style={{ color: "#707070" }}>
+						<p className={style.content} style={{ color: "#707070" }}>
 							Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié
 							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
-						</q>
+						</p>
 						<Row>
 							<Col span={20}>
 								{" "}
