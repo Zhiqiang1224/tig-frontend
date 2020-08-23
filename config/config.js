@@ -32,5 +32,5 @@ export default {
 			component: "Registered/index",
 		},
 	],
-	exportStatic: { htmlSuffix: true },
+	outputPath:'build'
 };
