@@ -5,7 +5,7 @@ export default {
 			{
 				antd: true,
 				title: "Tiggidoo : la plateforme des ",
-				metas: [{ charset: "utf-8", description: "这里填写描述内容" }],
+				metas: [{ charset: "utf-8", description: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager" }],
 				links: [{ rel: "shortcut icon", href: "assets/favicon.ico" }],
 			},
 		],
