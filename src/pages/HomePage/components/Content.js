@@ -1,4 +1,4 @@
-import { Button, Col, Form, Input, Row } from "antd";
+import { Button, Col, Form, Input, Row, Icon } from "antd";
 import Composant from "../../../assets/Composant.svg";
 import style from "../index.less";
 @Form.create()
@@ -18,18 +18,47 @@ export default class Content extends React.Component {
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF" }}>
 								Vous êtes un professionnel préposé au ménage ?
 							</h2>
+							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
+								Devenez un ToDoo !
+							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
-								Inscrivez-vous à notre campagne de recrutement d’experts du ménage. Tiggidoo est une plateforme simple d’utilisation, qui vous permet d’être contacté pour la
-								réalisation d’une prestation de service de ménage résidentiel.
-							</p>
-							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
-								Grâce à la plateforme vous profitez d’outils nécessaires à l’amélioration de votre quotidien, au soutien de votre organisation et à l’accélération de votre
-								productivité.
+								Devenez un Todoo, gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.
 							</p>
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								Inscrivez vous à notre recrutement, en répondant à notre questionnaire
+								C’est vous le patron
 							</h3>
-							<div style={{ textAlign: "center" }}>
+							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
+								En tant que Todoo, vous gardez le plein contrôle de votre horaire. Vous recevrez des offres automatiquement selon vos critères, votre secteur et vos disponibilités.
+							</p>
+							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
+								Travaillez mieux, pour gagnez plus
+							</h3>
+							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
+								Moins de gestion signifie plus de revenus et de liberté. Vous aurez accès gratuitement à des outils de gestion efficaces pour optimiser votre temps et augmenter vos
+								gains.
+							</p>
+							<Row>
+								<Col span={20} offset={2}>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+										<Icon type="check" style={{ marginRight: "15px" }} />
+										Inscription gratuite sans engagement
+									</p>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+										<Icon type="check" style={{ marginRight: "15px" }} />
+										Rémunération minimum réglementée
+									</p>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+										<Icon type="check" style={{ marginRight: "15px" }} />
+										Paiement sécurisé et garanti
+									</p>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+										<Icon type="check" style={{ marginRight: "15px" }} />
+										Grande visibilité de vos services
+									</p>
+								</Col>
+							</Row>
+
+							<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 								<Button style={{ width: "320px", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary">
 									JE DEVIENS PRO
 								</Button>

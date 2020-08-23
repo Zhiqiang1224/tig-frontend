@@ -3,25 +3,34 @@ export default {
 		[
 			"umi-plugin-react",
 			{
-				antd: true
-			}
-		]
+				antd: true,
+				title: "Tiggidoo : la plateforme des ",
+				metas: [{ charset: "utf-8", description: "这里填写描述内容" }],
+				links: [{ rel: "shortcut icon", href: "assets/favicon.ico" }],
+			},
+		],
 	],
+
 	proxy: {
 		"/api": {
-			target: "http://test.futve.com/",
-			changeOrigin: true
-		}
+			target: "https://api.tiggidoo.com",
+			changeOrigin: true,
+		},
 	},
 	theme: {
-		"primary-color": "#28CC8B"
+		"primary-color": "#28CC8B",
 	},
 	routes: [
 		{
 			path: "/",
-			component: "HomePage/index"
-		}
+			title: "Tiggidoo : la plateforme des ",
+			component: "HomePage/index",
+		},
+		{
+			path: "/Registered",
+			title: "Tiggidoo : la plateforme des ",
+			component: "Registered/index",
+		},
 	],
-	outputPath:'build'
-
+	exportStatic: { htmlSuffix: true },
 };

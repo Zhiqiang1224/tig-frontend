@@ -13,6 +13,11 @@ export default class ContentTop extends React.Component {
 		console.log(e);
 		let data = await service.sendemail();
 		console.log(data);
+		if (data.code == 200) {
+			this.setState({
+				email: "HasSent"
+			});
+		}
 	};
 
 	render() {
@@ -21,49 +26,54 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={11} offset={1}>
 						<h1 className={style.title} style={{ color: "#707070" }}>
-							Service de Ménage résidentiel
+							Pas le temps, ni le goût
 						</h1>
+						<span className={style.titles} style={{ color: "#707070" }}>
+							C’est Tiggidoo
+						</span>
+
 						<Row>
-							<Col span={20}>
+							<Col span={24}>
 								{" "}
 								<h2 className={style.smalltitle} style={{ color: "#707070" }}>
-									Nouvelle offre de service de ménage résidentiel au Quebec !
+									Trouvez votre expert en entretien ménager résidentiel
 								</h2>
 							</Col>
 						</Row>
 						<Row style={{ color: "#2880F9" }}>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>100% EXPERTS</div>
+								<div className={style.category}>VALIDER VOTRE TARIF</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>SANS ENGAGEMENT</div>
+								<div className={style.category}>CHOISISSEZ VOTRE TODOO</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>ASSISTANCE 7j/7</div>
+								<div className={style.category}>RÉSERVEZ EN LIGNE</div>
 							</Col>
 						</Row>
 						<q className={style.content} style={{ color: "#707070" }}>
-							Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-							Lorem Ipsum Lorem Ipsum Lorem
+							Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié
+							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
 						</q>
 						<Row>
 							<Col span={20}>
 								{" "}
 								<h3 className={style.othertitle} style={{ color: "#707070" }}>
-									Restez informé du lancement officiel de nos services
+									Devenez client VIP : C’est gratuit et sans engagement!
 								</h3>
 							</Col>
 						</Row>
-						<p className={style.content} style={{ color: "#707070" }}>
-							Saisissez votre courriel pour être informé en avant première du lancement de notre service d’offre de ménage résidentiels adapté au besoin de votre logement et de vos
-							disponibilités.
-						</p>
 						<div className={style.category} style={{ color: "#2880F9" }}>
 							PRÉ-INSCRIPTION : - 20%
 						</div>
+						<p className={style.content} style={{ color: "#707070" }}>
+							Tiggidoo prendra bientôt d’assaut le marché de l’entretien ménager résidentiel dans la grande région de Montréal. Laissez nous votre courriel, nous vous préviendrons dès
+							que nos services seront disponibles, en plus vous bénéficiez de -20% sur votre premier ménage.
+						</p>
+
 						<div style={{ paddingTop: "50px", paddingBottom: "50px" }}>
 							{this.state.email == "HasSent" ? (
 								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
