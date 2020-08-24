@@ -58,7 +58,7 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-							Merci, (Prénom_ToDoo)
+							Merci pour voter information
 						</h1>
 						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
 							{this.state.message}
