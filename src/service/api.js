@@ -27,7 +27,7 @@ axios.interceptors.response.use(
 );
 
 export const sendemail = async data => {
-	return await axios.post("https://api.tiggidoo.com/api/sendemail", qs.stringify({ email_id: "ganyinglai123@foxmail.com" }), { withCredentials: false }).then(response => {
+	return await axios.post("https://api.tiggidoo.com/api/sendemail", qs.stringify({ email_id: data }), { withCredentials: false }).then(response => {
 		return {
 			data: response.data,
 			code: response.status

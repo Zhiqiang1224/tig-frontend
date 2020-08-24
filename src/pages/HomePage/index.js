@@ -5,10 +5,7 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 @Form.create()
 export default class index extends React.Component {
-	componentDidMount = async () => {
-		// document.title = "Tiggidoo : la plateforme des "
-		
-	};
+	componentDidMount = async () => {};
 	render() {
 		return (
 			<div style={{ backgroundColor: "#E8E8E8" }}>

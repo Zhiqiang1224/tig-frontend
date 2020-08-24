@@ -6,18 +6,28 @@ const { Search } = Input;
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
-		email: "Unsent"
+		email: "Unsent" //Unsent|error
 	};
 	componentDidMount = async () => {};
 	sendEmail = async e => {
 		console.log(e);
-		let data = await service.sendemail();
+		let data = await service.sendemail(e);
 		console.log(data);
 		if (data.code == 200) {
 			this.setState({
 				email: "HasSent"
 			});
+		} else {
+			this.setState({
+				email: "error"
+			});
 		}
+	};
+
+	Reset = () => {
+		this.setState({
+			email: "Unsent"
+		});
 	};
 
 	render() {
@@ -78,7 +88,13 @@ export default class ContentTop extends React.Component {
 						<div style={{ paddingTop: "50px", paddingBottom: "50px" }}>
 							{this.state.email == "HasSent" ? (
 								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-									<Icon type="check" style={{ color: "#28cc8b", fontSize: "60px", marginLeft: "30px" }} /> MERCI, vos information sont enregistrées
+									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> MERCI, vos information sont
+									enregistrées
+								</div>
+							) : this.state.email == "error" ? (
+								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#f70c0c" }} onClick={this.Reset}>
+									<Icon type="close" style={{ color: "#f70c0c", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> Désolé, il semblerait que ce courriel
+									soit éronée
 								</div>
 							) : (
 								<Search

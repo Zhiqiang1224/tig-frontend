@@ -13,7 +13,7 @@ export default class Content extends React.Component {
 				<div style={{ backgroundColor: "#2880F9" }}>
 					<Row>
 						<Col span={8} offset={1}>
-							<img src={emploi_entretien_menager_montreal} alt="emploi_entretien_menager_montreal" width="100%" style={{ paddingTop: "90px", paddingBottom: "90px" }} />
+							<img src={emploi_entretien_menager_montreal} alt="emploi_entretien_menager_montreal" width="100%" style={{ paddingTop: "300px", paddingBottom: "90px" }} />
 						</Col>
 						<Col span={11} offset={3}>
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF" }}>
@@ -65,8 +65,6 @@ export default class Content extends React.Component {
 										JE DEVIENS PRO
 									</Button>
 								</Link>
-									
-								
 							</div>
 						</Col>
 					</Row>
