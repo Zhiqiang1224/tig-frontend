@@ -110,22 +110,22 @@ export default class ContentTop extends React.Component {
 						</Col>
 						<Col span={9} offset={1}>
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
-								<Form.Item label="NOM" className="Item">
+								<Form.Item label="" className="Item">
 									{getFieldDecorator("firstName", {
 										rules: [{ required: true, message: "VERMEIL" }]
-									})(<Input className="Inputs" placeholder="VERMEIL" />)}
+									})(<Input className="Inputs" placeholder="NOM" />)}
 								</Form.Item>
-								<Form.Item label="Prénom" className="Item">
+								<Form.Item label="" className="Item">
 									{getFieldDecorator("lastName", {
 										rules: [{ required: true, message: "Maxime" }]
-									})(<Input className="Inputs" placeholder="Maxime" />)}
+									})(<Input className="Inputs" placeholder="Prénom" />)}
 								</Form.Item>
-								<Form.Item label="Courriel" className="Item">
+								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
 										rules: [{ required: true, message: "Le courriel n’est pas bien renseigné" }]
 									})(<Input className="Inputs" placeholder="Courriel" />)}
 								</Form.Item>
-								<Form.Item label="Téléphone" className="Item">
+								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Téléphone" }]
 									})(<Input className="Inputs" placeholder="Téléphone" />)}

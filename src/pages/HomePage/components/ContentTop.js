@@ -62,7 +62,7 @@ export default class ContentTop extends React.Component {
 							<Col span={20}>
 								{" "}
 								<h3 className={style.othertitle} style={{ color: "#707070" }}>
-									Devenez client VIP : C’est gratuit et sans engagement!
+									Devenez client VIP : C'est gratuit et sans engagement!
 								</h3>
 							</Col>
 						</Row>
@@ -70,7 +70,7 @@ export default class ContentTop extends React.Component {
 							PRÉ-INSCRIPTION : - 20%
 						</div>
 						<p className={style.content} style={{ color: "#707070" }}>
-							Tiggidoo prendra bientôt d’assaut le marché de l’entretien ménager résidentiel dans la grande région de Montréal. Laissez nous votre courriel, nous vous préviendrons dès
+							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Laissez nous votre courriel, nous vous préviendrons dès
 							que nos services seront disponibles, en plus vous bénéficiez de -20% sur votre premier ménage.
 						</p>
 
@@ -83,8 +83,8 @@ export default class ContentTop extends React.Component {
 								<Search
 									className="Search"
 									prefix={<Icon type="mail" style={{ color: "#28cc8b", fontSize: "40px" }} />}
-									placeholder="Saisissez votre adresse"
-									enterButton="GOo"
+									placeholder="courriel@tiggidoo.com"
+									enterButton="ENVOYER"
 									size="large"
 									onSearch={this.sendEmail}
 								/>

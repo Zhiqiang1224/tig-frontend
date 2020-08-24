@@ -1,6 +1,7 @@
 import { Button, Col, Form, Input, Row, Icon } from "antd";
 import Composant from "../../../assets/Composant.svg";
 import style from "../index.less";
+import { Link } from "react-router-dom";
 @Form.create()
 export default class Content extends React.Component {
 	state = {};
@@ -25,7 +26,7 @@ export default class Content extends React.Component {
 								Devenez un Todoo, gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.
 							</p>
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								C’est vous le patron
+								C'est vous le patron
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
 								En tant que Todoo, vous gardez le plein contrôle de votre horaire. Vous recevrez des offres automatiquement selon vos critères, votre secteur et vos disponibilités.
@@ -59,9 +60,13 @@ export default class Content extends React.Component {
 							</Row>
 
 							<div style={{ textAlign: "center", paddingBottom: "40px" }}>
-								<Button style={{ width: "320px", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary">
-									JE DEVIENS PRO
-								</Button>
+								<Link to="/Registered">
+									<Button style={{ width: "320px", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary">
+										JE DEVIENS PRO
+									</Button>
+								</Link>
+									
+								
 							</div>
 						</Col>
 					</Row>
