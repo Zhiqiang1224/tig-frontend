@@ -58,7 +58,7 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-							Merci pour voter information
+						     Merci pour les informations d'inscription
 						</h1>
 						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
 							{this.state.message}
@@ -112,12 +112,12 @@ export default class ContentTop extends React.Component {
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("firstName", {
-										rules: [{ required: true, message: "VERMEIL" }]
+										rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
 									})(<Input className="Inputs" placeholder="NOM" />)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("lastName", {
-										rules: [{ required: true, message: "Maxime" }]
+										rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
 									})(<Input className="Inputs" placeholder="Prénom" />)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
@@ -127,7 +127,7 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
-										rules: [{ required: true, message: "Téléphone" }]
+										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
 									})(<Input className="Inputs" placeholder="Téléphone" />)}
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
