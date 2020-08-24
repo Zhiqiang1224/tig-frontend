@@ -17,15 +17,15 @@ export default class Footer extends React.Component {
 						<img src={Comp} alt="Comp" width="230px" style={{ marginTop: "30px" }} />
 					</Col>
 					<Col span={5}>
-						<img src={logo_tiggidoo_blanc} alt="logo_tiggidoo_blanc" width="230px" style={{ marginTop: "160px" }} />
+						<img src={logo_tiggidoo_blanc} alt="Service de ménage à domicile au Quebec" width="230px" style={{ marginTop: "160px" }} />
 						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>Copiright 2020 Tout droit réservé</div>
 					</Col>
 					<Col span={6} offset={4}>
 						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>SUIVEZ-NOUS</div>
 						<div style={{ color: "#ffffff", fontSize: "60px" }}>
-							<Icon type="facebook" />
-							<Icon type="linkedin" style={{ marginLeft: "20px" }} />
-							<Icon type="instagram" style={{ marginLeft: "20px" }} />
+							<Icon type="facebook" alt="Facebook de Tiggidoo" />
+							<Icon type="linkedin" alt="Linkedin de Tiggidoo" style={{ marginLeft: "20px" }} />
+							<Icon type="instagram" alt=" Instagram de Tiggidoo" style={{ marginLeft: "20px" }} />
 						</div>
 					</Col>
 					<Col span={4}>

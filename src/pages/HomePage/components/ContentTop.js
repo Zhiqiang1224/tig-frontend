@@ -109,7 +109,7 @@ export default class ContentTop extends React.Component {
 						</div>
 					</Col>
 					<Col span={10}>
-						<img src={menage_domicile_montreal} alt="menage_domicile_montreal" width="100%" className={style.Groupe} />
+						<img src={menage_domicile_montreal} alt="Trouver une femme de ménage à Montréal" width="100%" className={style.Groupe} />
 					</Col>
 				</Row>
 			</div>

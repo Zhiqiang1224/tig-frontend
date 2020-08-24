@@ -4,7 +4,7 @@ export default {
 			"umi-plugin-react",
 			{
 				antd: true,
-				title: "Tiggidoo : la plateforme des ",
+				title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
 				metas: [
 					{
 						charset: "utf-8",
@@ -28,12 +28,12 @@ export default {
 	routes: [
 		{
 			path: "/",
-			title: "Tiggidoo : la plateforme des ",
+			title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
 			component: "HomePage/index"
 		},
 		{
 			path: "/Registered",
-			title: "Tiggidoo : la plateforme des ",
+			title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
 			component: "Registered/index"
 		}
 	],
