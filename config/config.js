@@ -5,32 +5,37 @@ export default {
 			{
 				antd: true,
 				title: "Tiggidoo : la plateforme des ",
-				metas: [{ charset: "utf-8", description: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager" }],
-				links: [{ rel: "shortcut icon", href: "assets/favicon.ico" }],
-			},
-		],
+				metas: [
+					{
+						charset: "utf-8",
+						description: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager"
+					}
+				],
+				links: [{ rel: "shortcut icon", href: "/favicon.ico" }]
+			}
+		]
 	],
 
 	proxy: {
 		"/api": {
 			target: "https://api.tiggidoo.com",
-			changeOrigin: true,
-		},
+			changeOrigin: true
+		}
 	},
 	theme: {
-		"primary-color": "#28CC8B",
+		"primary-color": "#28CC8B"
 	},
 	routes: [
 		{
 			path: "/",
 			title: "Tiggidoo : la plateforme des ",
-			component: "HomePage/index",
+			component: "HomePage/index"
 		},
 		{
 			path: "/Registered",
 			title: "Tiggidoo : la plateforme des ",
-			component: "Registered/index",
-		},
+			component: "Registered/index"
+		}
 	],
-	outputPath:'build'
+	outputPath: "build"
 };

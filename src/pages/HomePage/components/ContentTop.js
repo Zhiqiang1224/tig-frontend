@@ -1,5 +1,5 @@
 import { Col, Form, Icon, Input, Row } from "antd";
-import Groupe from "../../../assets/Groupe.svg";
+import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
 const { Search } = Input;
@@ -25,17 +25,18 @@ export default class ContentTop extends React.Component {
 			<div>
 				<Row>
 					<Col span={11} offset={1}>
-						<h1 className={style.title} style={{ color: "#707070" }}>
+						<div className={style.title} style={{ color: "#464545" }}>
 							Pas le temps, ni le goût
-						</h1>
-						<span className={style.titles} style={{ color: "#707070" }}>
-							C’est Tiggidoo
-						</span>
+						</div>
+						<div className={style.titles} style={{ color: "#464545" }}>
+							<span>C’est Tiggid</span>
+							<span style={{ color: "#28cc8b" }}>oo</span>
+						</div>
 
 						<Row>
 							<Col span={24}>
 								{" "}
-								<h2 className={style.smalltitle} style={{ color: "#707070" }}>
+								<h2 className={style.smalltitle} style={{ color: "#464545" }}>
 									Trouvez votre expert en entretien ménager résidentiel
 								</h2>
 							</Col>
@@ -54,14 +55,14 @@ export default class ContentTop extends React.Component {
 								<div className={style.category}>RÉSERVEZ EN LIGNE</div>
 							</Col>
 						</Row>
-						<p className={style.content} style={{ color: "#707070" }}>
+						<p className={style.content} style={{ color: "#464545" }}>
 							Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié
 							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
 						</p>
 						<Row>
 							<Col span={20}>
 								{" "}
-								<h3 className={style.othertitle} style={{ color: "#707070" }}>
+								<h3 className={style.othertitle} style={{ color: "#464545" }}>
 									Devenez client VIP : C'est gratuit et sans engagement!
 								</h3>
 							</Col>
@@ -69,7 +70,7 @@ export default class ContentTop extends React.Component {
 						<div className={style.category} style={{ color: "#2880F9" }}>
 							PRÉ-INSCRIPTION : - 20%
 						</div>
-						<p className={style.content} style={{ color: "#707070" }}>
+						<p className={style.content} style={{ color: "#464545" }}>
 							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Laissez nous votre courriel, nous vous préviendrons dès
 							que nos services seront disponibles, en plus vous bénéficiez de -20% sur votre premier ménage.
 						</p>
@@ -92,7 +93,7 @@ export default class ContentTop extends React.Component {
 						</div>
 					</Col>
 					<Col span={10}>
-						<img src={Groupe} alt="Groupe" width="100%" className={style.Groupe} />
+						<img src={menage_domicile_montreal} alt="menage_domicile_montreal" width="100%" className={style.Groupe} />
 					</Col>
 				</Row>
 			</div>

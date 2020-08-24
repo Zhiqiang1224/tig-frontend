@@ -1,5 +1,5 @@
 import { Button, Col, Form, Input, Row, Icon } from "antd";
-import Composant from "../../../assets/Composant.svg";
+import emploi_entretien_menager_montreal from "../../../assets/emploi_entretien_menager_montreal.svg";
 import style from "../index.less";
 import { Link } from "react-router-dom";
 @Form.create()
@@ -13,7 +13,7 @@ export default class Content extends React.Component {
 				<div style={{ backgroundColor: "#2880F9" }}>
 					<Row>
 						<Col span={8} offset={1}>
-							<img src={Composant} alt="Composant" width="100%" style={{ paddingTop: "90px", paddingBottom: "90px" }} />
+							<img src={emploi_entretien_menager_montreal} alt="emploi_entretien_menager_montreal" width="100%" style={{ paddingTop: "90px", paddingBottom: "90px" }} />
 						</Col>
 						<Col span={11} offset={3}>
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF" }}>

@@ -1,5 +1,5 @@
 import { Col, Form, Icon, Input, Row, Button } from "antd";
-import Groupe from "../../../assets/Groupe.svg";
+import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
 import Link from "umi/link";
