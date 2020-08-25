@@ -52,11 +52,11 @@ export default class ContentTop extends React.Component {
 							</Col>
 						</Row>
 						<Row style={{ color: "#2880F9" }}>
-							<Col span={8}>
+							<Col span={7}>
 								{" "}
 								<div className={style.category}>VALIDER VOTRE TARIF</div>
 							</Col>
-							<Col span={8}>
+							<Col span={9}>
 								{" "}
 								<div className={style.category}>CHOISISSEZ VOTRE TODOO</div>
 							</Col>
@@ -99,7 +99,7 @@ export default class ContentTop extends React.Component {
 							) : (
 								<Search
 									className="Search"
-									prefix={<Icon type="mail" style={{ color: "#28cc8b", fontSize: "40px" }} />}
+									prefix={<Icon type="mail" style={{ color: "#28cc8b", fontSize: "30px" }} />}
 									placeholder="courriel@tiggidoo.com"
 									enterButton="ENVOYER"
 									size="large"
