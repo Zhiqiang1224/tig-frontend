@@ -23,9 +23,15 @@ export default class Footer extends React.Component {
 					<Col span={6} offset={4}>
 						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>SUIVEZ-NOUS</div>
 						<div style={{ color: "#ffffff", fontSize: "60px" }}>
-							<Icon type="facebook" />
-							<Icon type="linkedin" style={{ marginLeft: "20px" }} />
-							<Icon type="instagram" style={{ marginLeft: "20px" }} />
+						<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
+							<Icon style={{ color: "#ffffff", fontSize: "60px" }} type="facebook" alt="Facebook de Tiggidoo" />
+						</a>
+						<a href="https://www.linkedin.com/company/tiggidoo">
+						    <Icon  type="linkedin" alt="Linkedin de Tiggidoo" style={{ marginLeft: "20px", color: "#ffffff", fontSize: "60px" }} />
+						</a>
+						<a href="https://www.instagram.com/tiggidoo/">
+							<Icon type="instagram" alt=" Instagram de Tiggidoo" style={{ marginLeft: "20px", color: "#ffffff", fontSize: "60px" }} />
+						</a>
 						</div>
 					</Col>
 					<Col span={4}>
