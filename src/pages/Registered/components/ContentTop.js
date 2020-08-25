@@ -73,15 +73,19 @@ export default class ContentTop extends React.Component {
 				) : (
 					<Row>
 						<Col span={11} offset={1}>
-							<h1 className={style.title} style={{ color: "#707070" }}>
+							<h1 className={style.title} style={{ color: "#464545" }}>
 								Vous êtes travailleurs autonome dans le service ménagé résidentiel ?
 							</h1>
 							<Row>
-								<Col span={20}>
+								<Col span={30}>
 									{" "}
-									<h2 className={style.smalltitle} style={{ color: "#707070" }}>
+									<Row>
+									<Col span={30}>
+									<h3 className={style.smalltitle} style={{ color: "#2880F9", fontWeight:"bold" }}>
 										Gagnez des revenus additionnels rejoignez Tiggidoo
-									</h2>
+									</h3>
+									</Col>
+									</Row>
 									<p className={style.content} style={{ color: "#707070" }}>
 										Laissez nous vos coordonnées, dès que le recrutement sera opérationnel, un de nos experts vous préviendra en avant première
 									</p>
@@ -89,19 +93,19 @@ export default class ContentTop extends React.Component {
 							</Row>
 							<Row>
 								<Col>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Inscription gratuite sans engagement
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Rémunération minimum réglementée
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Paiement sécurisé et garanti
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Grande visibilité de vos services
 									</p>
