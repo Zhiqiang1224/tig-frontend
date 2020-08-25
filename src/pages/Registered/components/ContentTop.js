@@ -17,6 +17,7 @@ const formItemLayout = {
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
+		firstName: '',
 		register: false,
 		message: ""
 	};
@@ -37,8 +38,9 @@ export default class ContentTop extends React.Component {
 				console.log(data);
 				if (data.code == 200) {
 					this.setState({
+						firstName: values.firstName,
 						register: true,
-						message: "inscription réussie"
+						message: "ACCUEIL"
 					});
 				}
 				if (data.code == 404) {
@@ -58,15 +60,16 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-						     Merci pour les informations d'inscription
+						     Merci, {this.state.firstName}
 						</h1>
 						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
-							{this.state.message}
+							Un de nos experts prendra contact avec 
+							vous dès que le recrutement sera lancé
 						</h1>
 						<div style={{ textAlign: "center", marginTop: "50px" }}>
 							{" "}
 							<Link to="/">
-								<span className={style.herderspan}>Retour à l’accueil</span>
+								<span className={style.herderspan}>ACCUEIL</span>
 							</Link>
 						</div>
 					</Row>
@@ -86,7 +89,7 @@ export default class ContentTop extends React.Component {
 									</h3>
 									</Col>
 									</Row>
-									<p className={style.content} style={{ color: "#707070" }}>
+									<p className={style.content} style={{ color: "#464545" }}>
 										Laissez nous vos coordonnées, dès que le recrutement sera opérationnel, un de nos experts vous préviendra en avant première
 									</p>
 								</Col>
