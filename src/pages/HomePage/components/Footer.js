@@ -1,7 +1,7 @@
 import { Col, Form, Icon, Input, Row } from "antd";
 import Comp from "../../../assets/Comp.svg";
 import logo_tiggidoo_blanc from "../../../assets/logo_tiggidoo_blanc.svg";
-import plante from "../../../assets/plante2.svg";
+import plante from "../../../assets/plantes.svg";
 import style from "../index.less";
 
 @Form.create()
