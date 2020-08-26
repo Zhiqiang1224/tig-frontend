@@ -1,7 +1,7 @@
 import { Col, Form, Icon, Input, Row } from "antd";
 import Comp from "../../../assets/Comp.svg";
 import logo_tiggidoo_blanc from "../../../assets/logo_tiggidoo_blanc.svg";
-import plante from "../../../assets/plantes.svg";
+import plantes from "../../../assets/plantes.svg";
 import style from "../index.less";
 
 @Form.create()
@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
 						</div>
 					</Col>
 					<Col span={4}>
-						<img src={plante} alt="plante" width="240px" style={{ marginTop: "40px" }} />
+						<img src={plantes} alt="plante" width="240px" style={{ marginTop: "40px" }} />
 					</Col>
 				</Row>
 			</div>
