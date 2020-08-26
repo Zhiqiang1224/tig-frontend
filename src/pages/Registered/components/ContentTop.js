@@ -43,9 +43,9 @@ export default class ContentTop extends React.Component {
 						message: "ACCUEIL"
 					});
 				}
-				if (data.code == 404) {
+				if (data.code !== 200) {
 					this.setState({
-						register: true,
+						register: false,
 						message: data.data.error
 					});
 				}
@@ -129,7 +129,9 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
-										rules: [{ required: true, message: "Le courriel n’est pas bien renseigné" }]
+										rules: [{ required: true, message: "Le courriel n’est pas bien renseigné" }, {
+											type: 'email', message: "L'entrée n'est pas valide E-mail",
+											}]
 									})(<Input className="Inputs" placeholder="Courriel" />)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
