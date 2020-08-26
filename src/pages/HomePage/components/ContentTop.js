@@ -88,7 +88,7 @@ export default class ContentTop extends React.Component {
 						<div style={{ paddingTop: "50px", paddingBottom: "50px" }}>
 							{this.state.email == "HasSent" ? (
 								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> MERCI, vos information sont
+									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> MERCI, vos informations sont
 									enregistrées
 								</div>
 							) : this.state.email == "error" ? (
