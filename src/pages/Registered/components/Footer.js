@@ -35,7 +35,7 @@ export default class Footer extends React.Component {
 						</div>
 					</Col>
 					<Col span={4}>
-						<img src={plantes} alt="plante" width="240px" style={{ marginTop: "40px" }} />
+						<img src={Plantes} alt="plante" width="240px" style={{ marginTop: "40px" }} />
 					</Col>
 				</Row>
 			</div>
