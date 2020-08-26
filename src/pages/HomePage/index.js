@@ -1,4 +1,4 @@
-import { Card, Form, Icon, Tabs, Row, Col, Button, Timeline, Select, Tag, Input } from "antd";
+import { Card, Form, Icon, Tabs, Row, Col, Button, Timeline, Select, Tag, Input, Affix } from "antd";
 import Header from "./components/Header";
 import ContentTop from "./components/ContentTop";
 import Content from "./components/Content";
@@ -9,7 +9,10 @@ export default class index extends React.Component {
 	render() {
 		return (
 			<div style={{ backgroundColor: "#E8E8E8" }}>
-				<Header />
+				<Affix offsetTop={0} style={{ backgroundColor: "#E8E8E8" }}>
+					<Header />
+				</Affix>
+
 				<ContentTop />
 				<Content />
 				<Footer />

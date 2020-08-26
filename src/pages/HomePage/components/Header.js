@@ -9,10 +9,11 @@ export default class Header extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<img src={logo_tiggidoo} alt=" Tiggidoo : l'entretien ménager au Quebec" width="196px" className={style.logo} />
-
-				<Link  to="/Registered">
+			<div style={{ backgroundColor: "#E8E8E8" }}>
+				<Link to="/">
+				    <img src={logo_tiggidoo} alt=" Tiggidoo : l'entretien ménager au Quebec" width="196px" className={style.logo} />
+					</Link>
+				<Link to="/Registered">
 					<span className={style.herderspan}>DEVENIR PRO</span>
 				</Link>
 			</div>
