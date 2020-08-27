@@ -15,11 +15,16 @@ export default class Content extends React.Component {
 						<Col span={8} offset={1}>
 							<img src={emploi_entretien_menager_montreal} alt="Emploi entretien ménager à Montréal" width="100%" style={{ paddingTop: "300px", paddingBottom: "90px" }} />
 						</Col>
+						<Col span={12} offset={3}>
+							<h2 className={style.Showtitle} style={{ color: "#FFFFFF",marginBottom:"1px" }}>
+							Tiggidoo recherche des préposés à l’entretien ménager 
+							 </h2>
+							 <h2 className={style.Showtitle} style={{ color: "#FFFFFF", marginTop:"0.5px", marginBottom:"3px" }}>
+							À vos moppes, ready, gOo!
+							 </h2>
+                         </Col>
 						<Col span={11} offset={3}>
-							<h2 className={style.Showtitle} style={{ color: "#FFFFFF" }}>
-							Tiggidoo recherche des préposés à l’entretien ménager À vos moppes, ready, gOo!
-
-							</h2>
+							
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
 								Devenez un ToDoo !
 							</h3>

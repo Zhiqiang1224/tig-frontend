@@ -57,7 +57,7 @@ export default class ContentTop extends React.Component {
 	render() {
 		const { getFieldDecorator } = this.props.form;
 		const { message } = this.state;
-		
+	
 		return (
 			<div>
 				{this.state.register ? (
@@ -79,9 +79,11 @@ export default class ContentTop extends React.Component {
 				) : (
 					<Row>
 						<Col span={11} offset={1}>
-							<h1 className={style.title} style={{ color: "#464545" }}>
-							    Proposez vos services comme aide de ménage
-							</h1>
+							<Row>
+								<h1 className={style.title} style={{ color: "#464545" }}>
+									Proposez vos services comme aide de ménage
+								</h1>
+							</Row>
 							<Row>
 								<Col span={30}>
 									{" "}
@@ -115,10 +117,14 @@ export default class ContentTop extends React.Component {
 									</p>
 								</Col>
 							</Row>
-							<p className={style.content} style={{ color: "#464545" }}>
-									On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos coordonnées afin 
-									de vous contacter en avant première lors du lancement
-							</p>
+							<Row>
+								<Col span={23}>
+									<p className={style.content} style={{ color: "#464545" }}>
+											On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos
+											coordonnées afin de vous contacter en avant première lors du lancement
+									</p>
+							</Col>
+							</Row>
 						</Col>
 						<Col span={9} offset={1}>
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
@@ -134,8 +140,9 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
-										rules: [{ required: true, message: "Le courriel n'est pas bien renseigné" }, {
-											type: 'email', message: "L'entrée n'est pas valide E-mail",
+										rules: [{ required: true, message: "Le courriel peut pas être vide" }, {
+											type: 'email', message: "Le  E-mail n'est pas valide"}, {
+												validator: this.handleValidator
 											}]
 									})(<Input className="Inputs" placeholder="Courriel" />)}
 									<span className={style.Formspan}>{message}</span>
@@ -147,7 +154,7 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary" htmlType="submit">
-									   Je  Rejoins  Tiggidoo
+									   Je  rejoins  Tiggidoo
 									</Button>
 								</div>
 							</Form>
