@@ -44,11 +44,21 @@ export default class ContentTop extends React.Component {
 						message: "ACCUEIL"
 					});
 				}
-				if (data.code !== 200) {
-					this.setState({
-						register: false,
-						message: "Ce courriel est déja existant dans la base"
-					});
+				if (data.code !== 200 ) {
+					if(data.data.error == "The email is already exist"){
+                        this.setState({
+							register: false,
+							message_email: "Ce courriel est déja existant dans la base"
+						});
+					}
+
+					if(data.data.error == "The telephone is already exist"){
+                        this.setState({
+							register: false,
+							message_tel: "Ce téléphone est déja existant dans la base"
+						});
+					}
+					
 				}
 			}
 		});
@@ -56,7 +66,8 @@ export default class ContentTop extends React.Component {
 
 	render() {
 		const { getFieldDecorator } = this.props.form;
-		const { message } = this.state;
+		const { message_email } = this.state;
+		const { message_tel } = this.state;
 	
 		return (
 			<div>
@@ -145,12 +156,13 @@ export default class ContentTop extends React.Component {
 												validator: this.handleValidator
 											}]
 									})(<Input className="Inputs" placeholder="Courriel" />)}
-									<span className={style.Formspan}>{message}</span>
+									<span className={style.Formspan}>{message_email}</span>
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
 									})(<Input className="Inputs" placeholder="Téléphone" />)}
+									<span className={style.Formspan}>{message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary" htmlType="submit">
