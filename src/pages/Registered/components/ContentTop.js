@@ -72,7 +72,7 @@ export default class ContentTop extends React.Component {
 						<div style={{ textAlign: "center", marginTop: "50px" }}>
 							{" "}
 							<Link to="/">
-								<span className={style.herderspan}>ACCUEIL</span>
+								<span className={style.buttonaccueil}>ACCUEIL</span>
 							</Link>
 						</div>
 					</Row>
