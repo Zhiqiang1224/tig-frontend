@@ -81,8 +81,9 @@ export default class ContentTop extends React.Component {
 							PRÉ-INSCRIPTION : - 20%
 						</div>
 						<p className={style.content} style={{ color: "#464545" }}>
-							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Laissez nous votre courriel, nous vous préviendrons dès
-							que nos services seront disponibles, en plus vous bénéficiez de -20% sur votre premier ménage.
+							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et
+							 recevoir un rabais de 20% sur votre premier ménage.
+
 						</p>
 
 						<div style={{ paddingTop: "50px", paddingBottom: "50px" }}>
@@ -101,7 +102,7 @@ export default class ContentTop extends React.Component {
 									className="Search"
 									prefix={<Icon type="mail" style={{ color: "#28cc8b", fontSize: "30px" }} />}
 									placeholder="courriel@tiggidoo.com"
-									enterButton="ENVOYER"
+									enterButton="Soyez VIP / Goo"
 									size="large"
 									onSearch={this.sendEmail}
 								/>

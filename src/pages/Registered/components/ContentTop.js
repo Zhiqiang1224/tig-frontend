@@ -19,7 +19,8 @@ export default class ContentTop extends React.Component {
 	state = {
 		firstName: '',
 		register: false,
-		message: ""
+		message_email: "",
+		message_tel: "",
 	};
 	componentDidMount = async () => {};
 	handleSubmit = async e => {
@@ -46,7 +47,7 @@ export default class ContentTop extends React.Component {
 				if (data.code !== 200) {
 					this.setState({
 						register: false,
-						message: data.data.error
+						message: "Ce courriel est déja existant dans la base"
 					});
 				}
 			}
@@ -55,6 +56,8 @@ export default class ContentTop extends React.Component {
 
 	render() {
 		const { getFieldDecorator } = this.props.form;
+		const { message } = this.state;
+		
 		return (
 			<div>
 				{this.state.register ? (
@@ -77,43 +80,45 @@ export default class ContentTop extends React.Component {
 					<Row>
 						<Col span={11} offset={1}>
 							<h1 className={style.title} style={{ color: "#464545" }}>
-								Vous êtes travailleurs autonome dans le service ménagé résidentiel ?
+							    Proposez vos services comme aide de ménage
 							</h1>
 							<Row>
 								<Col span={30}>
 									{" "}
 									<Row>
-									<Col span={30}>
-									<h3 className={style.smalltitle} style={{ color: "#2880F9", fontWeight:"bold" }}>
-										Gagnez des revenus additionnels rejoignez Tiggidoo
-									</h3>
-									</Col>
+										<Col span={30}>
+										<h3 className={style.smalltitle} style={{ color: "#2880F9", fontWeight:"bold" }}>
+											Gagnez des revenus additionnels, rejoignez Tiggidoo
+										</h3>
+										</Col>
 									</Row>
-									<p className={style.content} style={{ color: "#464545" }}>
-										Laissez nous vos coordonnées, dès que le recrutement sera opérationnel, un de nos experts vous préviendra en avant première
-									</p>
+									
 								</Col>
 							</Row>
 							<Row>
 								<Col>
 									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Inscription gratuite sans engagement
+										Horaire de travail flexible
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Rémunération minimum réglementée
+										Facturation simple et centralisée
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Paiement sécurisé et garanti
+										Outils de gestion et calendrier intégrés
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Grande visibilité de vos services
+										Soutien professionnel et formations 
 									</p>
 								</Col>
 							</Row>
+							<p className={style.content} style={{ color: "#464545" }}>
+									On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos coordonnées afin 
+									de vous contacter en avant première lors du lancement
+							</p>
 						</Col>
 						<Col span={9} offset={1}>
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
@@ -129,10 +134,11 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
-										rules: [{ required: true, message: "Le courriel n’est pas bien renseigné" }, {
+										rules: [{ required: true, message: "Le courriel n'est pas bien renseigné" }, {
 											type: 'email', message: "L'entrée n'est pas valide E-mail",
 											}]
 									})(<Input className="Inputs" placeholder="Courriel" />)}
+									<span className={style.Formspan}>{message}</span>
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
@@ -141,7 +147,7 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary" htmlType="submit">
-										DEVENEZ UN TODOO
+									   Je  Rejoins  Tiggidoo
 									</Button>
 								</div>
 							</Form>

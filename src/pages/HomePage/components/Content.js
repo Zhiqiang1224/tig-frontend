@@ -17,13 +17,14 @@ export default class Content extends React.Component {
 						</Col>
 						<Col span={11} offset={3}>
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF" }}>
-								Vous êtes un professionnel préposé au ménage ?
+							Tiggidoo recherche des préposés à l’entretien ménager À vos moppes, ready, gOo!
+
 							</h2>
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
 								Devenez un ToDoo !
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
-								Devenez un Todoo, gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.
+							    Gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.
 							</p>
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
 								C'est vous le patron
@@ -32,7 +33,7 @@ export default class Content extends React.Component {
 								En tant que Todoo, vous gardez le plein contrôle de votre horaire. Vous recevrez des offres automatiquement selon vos critères, votre secteur et vos disponibilités.
 							</p>
 							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								Travaillez mieux, pour gagnez plus
+								Travaillez mieux, gagnez plus
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
 								Moins de gestion signifie plus de revenus et de liberté. Vous aurez accès gratuitement à des outils de gestion efficaces pour optimiser votre temps et augmenter vos
@@ -62,7 +63,7 @@ export default class Content extends React.Component {
 							<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 								<Link to="/Registered">
 									<Button style={{ width: "320px", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary">
-										JE DEVIENS PRO
+									     Je deviens un Todoo
 									</Button>
 								</Link>
 							</div>
