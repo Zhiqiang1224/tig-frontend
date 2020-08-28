@@ -21,7 +21,19 @@ export default class ContentTop extends React.Component {
 		register: false,
 		message_email: "",
 		message_tel: "",
+		isVisible : true
 	};
+
+	
+
+	handleChange (e) {
+		this.setState({isVisible: false})
+	}
+
+	handleClick () {
+		this.setState({isVisible: true})
+	}
+
 	componentDidMount = async () => {};
 	handleSubmit = async e => {
 		e.preventDefault();
@@ -48,14 +60,16 @@ export default class ContentTop extends React.Component {
 					if(data.data.error == "The email is already exist"){
                         this.setState({
 							register: false,
-							message_email: "Ce courriel est déja existant dans la base"
+							message_email: "Ce courriel est déja existant dans la base",
+							message_tel: ""
 						});
 					}
 
 					if(data.data.error == "The telephone is already exist"){
                         this.setState({
 							register: false,
-							message_tel: "Ce téléphone est déja existant dans la base"
+							message_tel: "Ce téléphone est déja existant dans la base",
+							message_email: ""
 						});
 					}
 					
@@ -68,6 +82,7 @@ export default class ContentTop extends React.Component {
 		const { getFieldDecorator } = this.props.form;
 		const { message_email } = this.state;
 		const { message_tel } = this.state;
+		const { isVisible } = this.state;
 	
 		return (
 			<div>
@@ -142,12 +157,12 @@ export default class ContentTop extends React.Component {
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("firstName", {
 										rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="NOM" />)}
+									})(<Input className="Inputs" placeholder="NOM" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("lastName", {
 										rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="Prénom" />)}
+									})(<Input className="Inputs" placeholder="Prénom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
@@ -155,17 +170,17 @@ export default class ContentTop extends React.Component {
 											type: 'email', message: "Le  E-mail n'est pas valide"}, {
 												validator: this.handleValidator
 											}]
-									})(<Input className="Inputs" placeholder="Courriel" />)}
-									<span className={style.Formspan}>{message_email}</span>
+									})(<Input className="Inputs" placeholder="Courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
+									<span className={style.Formspan} >{isVisible && message_email}</span>
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="Téléphone" />)}
-									<span className={style.Formspan}>{message_tel}</span>
+									})(<Input className="Inputs" placeholder="Téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									<span className={style.Formspan} >{isVisible && message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
-									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary" htmlType="submit">
+									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary" htmlType="submit" onClick={this.handleClick.bind(this)}>
 									   Je  rejoins  Tiggidoo
 									</Button>
 								</div>
