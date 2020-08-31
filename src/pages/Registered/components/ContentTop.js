@@ -157,12 +157,12 @@ export default class ContentTop extends React.Component {
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("firstName", {
 										rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="NOM" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder="Votre Nom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("lastName", {
 										rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="Prénom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder="Votre Prénom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
@@ -170,13 +170,13 @@ export default class ContentTop extends React.Component {
 											type: 'email', message: "Le  E-mail n'est pas valide"}, {
 												validator: this.handleValidator
 											}]
-									})(<Input className="Inputs" placeholder="Courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
+									})(<Input className="Inputs" placeholder="Votre Courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
 									<span className={style.Formspan} >{isVisible && message_email}</span>
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
-									})(<Input className="Inputs" placeholder="Téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder="Votre N° de téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 									<span className={style.Formspan} >{isVisible && message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
