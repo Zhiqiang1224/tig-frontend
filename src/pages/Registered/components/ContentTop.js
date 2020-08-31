@@ -17,7 +17,7 @@ const formItemLayout = {
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
-		firstName: '',
+		lastName: '',
 		register: false,
 		message_email: "",
 		message_tel: "",
@@ -51,7 +51,7 @@ export default class ContentTop extends React.Component {
 				console.log(data);
 				if (data.code == 200) {
 					this.setState({
-						firstName: values.firstName,
+						lastName: values.lastName,
 						register: true,
 						message: "ACCUEIL"
 					});
@@ -89,13 +89,13 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-						     Merci, {this.state.firstName}
+						     Merci, {this.state.lastName}
 						</h1>
 						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
-							Un de nos experts prendra contact avec 
+							Un de nos experts prendra contact avec <br />
 							vous dès que le recrutement sera lancé
 						</h1>
-						<div style={{ textAlign: "center", marginTop: "50px" }}>
+						<div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
 							{" "}
 							<Link to="/">
 								<span className={style.buttonaccueil}>ACCUEIL</span>
@@ -125,19 +125,19 @@ export default class ContentTop extends React.Component {
 							</Row>
 							<Row>
 								<Col>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Horaire de travail flexible
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Facturation simple et centralisée
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Outils de gestion et calendrier intégrés
 									</p>
-									<p style={{ color: "#4D4D4D", fontSize: "25px", fontFamily: "Avenir", fontWeight: "bold" }}>
+									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 										Soutien professionnel et formations 
 									</p>
@@ -166,7 +166,7 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="" className="Item">
 									{getFieldDecorator("email", {
-										rules: [{ required: true, message: "Le courriel peut pas être vide" }, {
+										rules: [{ required: true, message: "Le courriel ne peut pas être vide" }, {
 											type: 'email', message: "Le  E-mail n'est pas valide"}, {
 												validator: this.handleValidator
 											}]
@@ -188,7 +188,7 @@ export default class ContentTop extends React.Component {
 						</Col>
 					</Row>
 				)}
-				}
+				
 			</div>
 		);
 	}

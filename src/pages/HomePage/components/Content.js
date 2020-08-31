@@ -46,19 +46,19 @@ export default class Content extends React.Component {
 							</p>
 							<Row>
 								<Col span={20} offset={2}>
-									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF",  fontSize: "21px" }}>
 										<Icon type="check" style={{ marginRight: "15px" }} />
 										Inscription gratuite sans engagement
 									</p>
-									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF", fontSize: "21px" }}>
 										<Icon type="check" style={{ marginRight: "15px" }} />
 										Rémunération minimum réglementée
 									</p>
-									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF", fontSize: "21px" }}>
 										<Icon type="check" style={{ marginRight: "15px" }} />
 										Paiement sécurisé et garanti
 									</p>
-									<p className={style.ShowcontentList} style={{ color: "#FFFFFF" }}>
+									<p className={style.ShowcontentList} style={{ color: "#FFFFFF", fontSize: "21px" }}>
 										<Icon type="check" style={{ marginRight: "15px" }} />
 										Grande visibilité de vos services
 									</p>
