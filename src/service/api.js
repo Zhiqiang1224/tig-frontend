@@ -36,7 +36,7 @@ export const sendemail = async data => {
 };
 
 export const register = async data => {
-	return await axios.post("https://api.tiggidoo.com/api/register", qs.stringify(data), { withCredentials: false }).then((response, e) => {
+	return await axios.post("https://api.tiggidoo.com/api/register/pro", qs.stringify(data), { withCredentials: false }).then((response, e) => {
 		return {
 			data: response.data,
 			code: response.status
