@@ -5,29 +5,57 @@ import style from "../index.less";
 const { Search } = Input;
 @Form.create()
 export default class ContentTop extends React.Component {
-	state = {};
+	state = {
+		firstName: '',
+		registerUser: false,
+		message_email: "",
+		isVisible : true
+	};
+
+	handleChange (e) {
+		this.setState({isVisible: false})
+	}
+
+	handleClick () {
+		this.setState({isVisible: true})
+	}
+
 	componentDidMount = async () => {};
-
-	onChange = e => {
-		console.log(e.target.value);
-		this.setState({
-			value: e.target.value
-		});
-	};
-
-	sendEmail = async () => {
-		let value = this.state.value;
-		let data = await service.sendemail(value);
-		console.log(data);
-	};
-
-	Reset = () => {
-		this.setState({
-			email: "Unsent"
+	handleSubmit = async e => {
+		e.preventDefault();
+		this.props.form.validateFieldsAndScroll(async (err, values) => {
+			if (!err) {
+				console.log("Received values of form: ", values);
+				let p = {
+					firstName: values.firstName,
+					email: values.email	
+				};
+				let data = await service.registerUser(p);
+				console.log(data);
+				if (data.code == 200) {
+					this.setState({
+						firstName: values.firstName,
+						registerUser: true,
+						message: "ACCUEIL"
+					});
+				}
+				if (data.code !== 200 ) {
+					if(data.data.error == "The email is already exist"){
+                        this.setState({
+							registerUser: false,
+							message_email: "Ce courriel est déja existant dans la base",
+						});
+					}
+				}
+			}
 		});
 	};
 
 	render() {
+		const { getFieldDecorator } = this.props.form;
+		const { message_email } = this.state;
+		const { isVisible } = this.state;
+
 		return (
 			<div>
 				<Row>
@@ -102,21 +130,70 @@ export default class ContentTop extends React.Component {
 					</Col>
 				</Row>
 
-				<Row>
+				<Row >
 					<Col span={21} offset={1}>
-						<Input className="Mobile_Input" placeholder="courriel@tiggidoo.com" style={{ fontSize: "15px", height: "55px" }} onChange={this.onChange} />
+						<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
+						{this.state.registerUser ? (
+								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
+									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700,  verticalAlign: 'middle' }} />
+									<p> MERCI, vos informations sont
+									 enregistrées</p>
+								</div>
+							) : (
+								<Row>
+									<Form.Item label="Prénom" className="Item">
+										
+										{getFieldDecorator("firstName", {
+											rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+										})(
+											<Input
+												className="Inputs"
+												placeholder="Votre prénom"
+												id="error"
+												onChange={e => {
+													this.handleChange(e);
+												}}
+												ref={input => (this.myinput = input)}
+											/>
+										)}
+									</Form.Item>
+									
+									<Form.Item label="Courriel" className="Item">
+										{getFieldDecorator("email", {
+											rules: [
+												{ required: true, message: "Le courriel ne peut pas être vide" },
+												{
+													type: "email",
+													message: "Le  E-mail n'est pas valide"
+												},
+												{
+													validator: this.handleValidator
+												}
+											]
+										})(
+											<Input
+												className="Inputs"
+												placeholder="Votre courriel"
+												onChange={e => {
+													this.handleChange(e);
+												}}
+												ref={input => (this.myinput = input)}
+											/>
+										)}
+										<span className={style.Formspan}>{isVisible && message_email}</span>
+									</Form.Item>
+									</Row>
+								)}
+									<div style={{ textAlign: "center", marginTop: "20px" }}>
+										<Col span={21} offset={1}>
+											<Button type="primary" style={{ width: "196px", height: "46px", fontSize: "18px" }} htmlType="submit" onClick={this.handleClick.bind(this)}>
+												ENVOYER
+											</Button>
+										</Col>
+									</div>
+								</Form>
 					</Col>
-				</Row>
-
-				<Row>
-					<div style={{ textAlign: "center", marginTop: "20px" }}>
-						<Col span={21} offset={1}>
-							<Button type="primary" style={{ width: "196px", height: "46px", fontSize: "18px" }} onClick={this.sendEmail}>
-								ENVOYER
-							</Button>
-						</Col>
-					</div>
-				</Row>
+				</Row>				
 			</div>
 		);
 	}
