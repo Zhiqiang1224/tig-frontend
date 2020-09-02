@@ -45,7 +45,7 @@ export default class ContentTop extends React.Component {
 					telephone: values.telephone,
 					role_id: 1
 				};
-				let data = await service.register(p);
+				let data = await service.registerPro(p);
 				console.log(data);
 				if (data.code == 200) {
 					this.setState({
