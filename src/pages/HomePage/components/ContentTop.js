@@ -1,4 +1,4 @@
-import { Col, Form, Icon, Input, Row } from "antd";
+import { Col, Form, Icon, Input, Row, Button } from "antd";
 import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
@@ -6,31 +6,56 @@ const { Search } = Input;
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
-		email: "Unsent" //Unsent|error
-	};
-	componentDidMount = async () => {};
-	sendEmail = async e => {
-		console.log(e);
-		let data = await service.sendemail(e);
-		console.log(data);
-		if (data.code == 200) {
-			this.setState({
-				email: "HasSent"
-			});
-		} else {
-			this.setState({
-				email: "error"
-			});
-		}
+		firstName: '',
+		registerUser: false,
+		message_email: "",
+		isVisible : true
 	};
 
-	Reset = () => {
-		this.setState({
-			email: "Unsent"
+	handleChange (e) {
+		this.setState({isVisible: false})
+	}
+
+	handleClick () {
+		this.setState({isVisible: true})
+	}
+
+	componentDidMount = async () => {};
+	handleSubmit = async e => {
+		e.preventDefault();
+		this.props.form.validateFieldsAndScroll(async (err, values) => {
+			if (!err) {
+				console.log("Received values of form: ", values);
+				let p = {
+					firstName: values.firstName,
+					email: values.email	
+				};
+				let data = await service.registerUser(p);
+				console.log(data);
+				if (data.code == 200) {
+					this.setState({
+						firstName: values.firstName,
+						registerUser: true,
+						message: "ACCUEIL"
+					});
+				}
+				if (data.code !== 200 ) {
+					if(data.data.error == "The email is already exist"){
+                        this.setState({
+							registerUser: false,
+							message_email: "Ce courriel est déja existant dans la base",
+						});
+					}
+				}
+			}
 		});
 	};
 
 	render() {
+		const { getFieldDecorator } = this.props.form;
+		const { message_email } = this.state;
+		const { isVisible } = this.state;
+
 		return (
 			<div>
 				<Row>
@@ -47,7 +72,7 @@ export default class ContentTop extends React.Component {
 							<Col span={24}>
 								{" "}
 								<h2 className={style.smalltitle} style={{ color: "#464545" }}>
-									Trouvez votre expert en entretien ménager résidentiel
+									Trouvez votre expert en entretien ménager résidentiel,c'est simple!
 								</h2>
 							</Col>
 						</Row>
@@ -86,27 +111,45 @@ export default class ContentTop extends React.Component {
 
 						</p>
 
-						<div style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-							{this.state.email == "HasSent" ? (
+						<div style={{ paddingTop: "10px", paddingBottom: "50px" }}>
+							<Form onSubmit={this.handleSubmit} style={{ marginTop: "0px" }}>
+
+							{this.state.registerUser ? (
 								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> MERCI, vos informations sont
+									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} /> MERCI, vos informations sont
 									enregistrées
 								</div>
-							) : this.state.email == "error" ? (
-								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#f70c0c" }} onClick={this.Reset}>
-									<Icon type="close" style={{ color: "#f70c0c", fontSize: "35px", marginLeft: "30px", marginTop: "20px", fontWeight: 700 }} /> Désolé, il semblerait que ce courriel
-									soit éronée
-								</div>
 							) : (
-								<Search
-									className="Search"
-									prefix={<Icon type="mail" style={{ color: "#28cc8b", fontSize: "30px" }} />}
-									placeholder="courriel@tiggidoo.com"
-									enterButton="Soyez VIP / Goo"
-									size="large"
-									onSearch={this.sendEmail}
-								/>
+								<Row>
+									<Col span={8}>
+										<Form.Item label="Prénom" className="Item">
+											{getFieldDecorator("firstName", {
+												rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+											})(<Input className="Inputs" placeholder="Votre prénom"  onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+										</Form.Item>
+									</Col>
+									
+									<Col  span={15} style={{marginLeft: "30px"}}>
+										<Form.Item label="Courriel" className="Item">
+											{getFieldDecorator("email", {
+												rules: [{ required: true, message: "Le courriel ne peut pas être vide" }, {
+													type: 'email', message: "Le  E-mail n'est pas valide"}, {
+														validator: this.handleValidator
+													}]
+											})(<Input className="Inputs" placeholder="Votre courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
+											<span className={style.Formspan} >{isVisible && message_email}</span>
+										</Form.Item>
+									</Col>
+								</Row>
+								
 							)}
+
+								<div style={{ textAlign: "center", paddingBottom: "30px" }}>
+									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "20px", fontWeight: "600" }} type="primary" htmlType="submit" onClick={this.handleClick.bind(this)}>
+									   PRE-INSCRIPTION
+									</Button>
+								</div>
+							</Form>
 						</div>
 					</Col>
 					<Col span={10}>

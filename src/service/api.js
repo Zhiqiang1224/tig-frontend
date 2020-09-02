@@ -27,7 +27,7 @@ axios.interceptors.response.use(
 );
 
 export const registerUser = async data => {
-	return await axios.post("https://api.tiggidoo.com/api/landing/register/user", qs.stringify({ email_id: data }), { withCredentials: false }).then(response => {
+	return await axios.post("https://api.tiggidoo.com/api/landing/register/user", qs.stringify(data), { withCredentials: false }).then(response => {
 		return {
 			data: response.data,
 			code: response.status
