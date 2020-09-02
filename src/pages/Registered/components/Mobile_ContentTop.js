@@ -150,7 +150,7 @@ export default class ContentTop extends React.Component {
 
 						<Row>
 							<Col span={22} offset={1}>
-								<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
+								<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
 									<Form.Item label="Prénom" className="Item">
 										{getFieldDecorator("lastName", {
 											rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]

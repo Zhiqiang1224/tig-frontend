@@ -62,11 +62,13 @@ export default class ContentTop extends React.Component {
 					<Col span={11} offset={1}>
 						<div className={style.title} style={{ color: "#464545" }}>
 							Pas le temps, ni le goût
+							<span className={style.titles}> C’est Tiggid</span>
+							<span className={style.titles} style={{ color: "#28cc8b" }}>oo</span>
 						</div>
 						<div className={style.titles} style={{ color: "#464545" }}>
-							<span>C’est Tiggid</span>
-							<span style={{ color: "#28cc8b" }}>oo</span>
+							
 						</div>
+						
 
 						<Row>
 							<Col span={24}>
@@ -79,15 +81,21 @@ export default class ContentTop extends React.Component {
 						<Row style={{ color: "#2880F9" }}>
 							<Col span={7}>
 								{" "}
-								<div className={style.category}>VALIDER VOTRE TARIF</div>
+								<div className={style.category}>VALIDER VOTRE TARIF
+								     <Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 800 }} ></Icon>
+								</div>
 							</Col>
 							<Col span={9}>
 								{" "}
-								<div className={style.category}>CHOISISSEZ VOTRE TODOO</div>
+								<div className={style.category}>CHOISISSEZ VOTRE TODOO
+								      <Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} ></Icon>
+								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>RÉSERVEZ EN LIGNE</div>
+								<div className={style.category}>RÉSERVEZ EN LIGNE
+								<Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} ></Icon>
+								</div>
 							</Col>
 						</Row>
 						<p className={style.content} style={{ color: "#464545" }}>
