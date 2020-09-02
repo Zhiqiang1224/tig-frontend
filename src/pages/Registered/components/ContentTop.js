@@ -18,7 +18,7 @@ const formItemLayout = {
 export default class ContentTop extends React.Component {
 	state = {
 		lastName: '',
-		register: false,
+		registerPro: false,
 		message_email: "",
 		message_tel: "",
 		isVisible : true
@@ -47,19 +47,19 @@ export default class ContentTop extends React.Component {
 					telephone: values.telephone,
 					role_id: 1
 				};
-				let data = await service.register(p);
+				let data = await service.registerPro(p);
 				console.log(data);
 				if (data.code == 200) {
 					this.setState({
 						lastName: values.lastName,
-						register: true,
+						registerPro: true,
 						message: "ACCUEIL"
 					});
 				}
 				if (data.code !== 200 ) {
 					if(data.data.error == "The email is already exist"){
                         this.setState({
-							register: false,
+							registerPro: false,
 							message_email: "Ce courriel est déja existant dans la base",
 							message_tel: ""
 						});
@@ -67,7 +67,7 @@ export default class ContentTop extends React.Component {
 
 					if(data.data.error == "The telephone is already exist"){
                         this.setState({
-							register: false,
+							registerPro: false,
 							message_tel: "Ce téléphone est déja existant dans la base",
 							message_email: ""
 						});
@@ -86,7 +86,7 @@ export default class ContentTop extends React.Component {
 	
 		return (
 			<div>
-				{this.state.register ? (
+				{this.state.registerPro ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
 						     Merci, {this.state.lastName}
