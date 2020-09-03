@@ -134,7 +134,7 @@ export default class ContentTop extends React.Component {
 					<Col span={21} offset={1}>
 						<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
 						{this.state.registerUser ? (
-								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
+								<div className={style.Mobile_sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
 									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700,  verticalAlign: 'middle' }} />
 									<p> MERCI, vos informations sont
 									 enregistrées</p>
