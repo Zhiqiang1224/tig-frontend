@@ -27,11 +27,13 @@ export default class ContentTop extends React.Component {
 	
 
 	handleChange (e) {
-		this.setState({isVisible: false})
+		this.setState({isVisible: false});
+		this.setState({message_email: ""});
+		this.setState({message_tel: ""});
 	}
 
 	handleClick () {
-		this.setState({isVisible: true})
+		this.setState({isVisible: true});
 	}
 
 	componentDidMount = async () => {};
@@ -171,13 +173,13 @@ export default class ContentTop extends React.Component {
 												validator: this.handleValidator
 											}]
 									})(<Input className="Inputs" placeholder="Votre courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
-									<span className={style.Formspan} >{isVisible && message_email}</span>
+									<span className={style.Formspan} >{message_email}</span>
 								</Form.Item>
 								<Form.Item label="Téléphone" className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
 									})(<Input className="Inputs" placeholder="Votre N° de téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
-									<span className={style.Formspan} >{isVisible && message_tel}</span>
+									<span className={style.Formspan} >{message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "40px", fontWeight: "600" }} type="primary" htmlType="submit" onClick={this.handleClick.bind(this)}>
