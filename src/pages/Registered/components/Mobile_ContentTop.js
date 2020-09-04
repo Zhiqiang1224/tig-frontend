@@ -26,6 +26,8 @@ export default class ContentTop extends React.Component {
 
 	handleChange(e) {
 		this.setState({ isVisible: false });
+		this.setState({message_email: ""});
+		this.setState({message_tel: ""});
 	}
 
 	handleClick() {
@@ -202,7 +204,7 @@ export default class ContentTop extends React.Component {
 												ref={input => (this.myinput = input)}
 											/>
 										)}
-										<span className={style.Formspan}>{isVisible && message_email}</span>
+										<span className={style.Formspan}>{message_email}</span>
 									</Form.Item>
 									<Form.Item label="Téléphone" className="Item">
 										{getFieldDecorator("telephone", {
@@ -217,7 +219,7 @@ export default class ContentTop extends React.Component {
 												ref={input => (this.myinput = input)}
 											/>
 										)}
-										<span className={style.Formspan}>{isVisible && message_tel}</span>
+										<span className={style.Formspan}>{message_tel}</span>
 									</Form.Item>
 									<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 										<Button
