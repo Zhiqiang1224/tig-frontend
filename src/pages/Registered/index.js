@@ -37,7 +37,10 @@ export default class Registered extends React.Component {
 						<Affix offsetTop={0}>
 							<Header style={{ backgroundColor: "#FFFFFF" }} />
 						</Affix>
-						<ContentTop />
+						<div style={{ backgroundColor: "#F6F6F6" }}>
+							<ContentTop />
+						</div>
+
 						<Footer />
 					</div>
 				) : (

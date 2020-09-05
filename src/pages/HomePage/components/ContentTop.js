@@ -6,18 +6,18 @@ const { Search } = Input;
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
-		firstName: '',
+		firstName: "",
 		registerUser: false,
 		message_email: "",
-		isVisible : true
+		isVisible: true
 	};
 
-	handleChange (e) {
-		this.setState({isVisible: false})
+	handleChange(e) {
+		this.setState({ isVisible: false });
 	}
 
-	handleClick () {
-		this.setState({isVisible: true})
+	handleClick() {
+		this.setState({ isVisible: true });
 	}
 
 	componentDidMount = async () => {};
@@ -28,7 +28,7 @@ export default class ContentTop extends React.Component {
 				console.log("Received values of form: ", values);
 				let p = {
 					firstName: values.firstName,
-					email: values.email	
+					email: values.email
 				};
 				let data = await service.registerUser(p);
 				console.log(data);
@@ -39,11 +39,11 @@ export default class ContentTop extends React.Component {
 						message: "ACCUEIL"
 					});
 				}
-				if (data.code !== 200 ) {
-					if(data.data.error == "The email is already exist"){
-                        this.setState({
+				if (data.code !== 200) {
+					if (data.data.error == "The email is already exist") {
+						this.setState({
 							registerUser: false,
-							message_email: "Ce courriel est déja existant dans la base",
+							message_email: "Ce courriel est déja existant dans la base"
 						});
 					}
 				}
@@ -63,13 +63,11 @@ export default class ContentTop extends React.Component {
 						<div className={style.title} style={{ color: "#464545" }}>
 							Pas le temps, ni le goût
 							<span className={style.titles}> C’est Tiggid</span>
-							<span className={style.titles} style={{ color: "#28cc8b" }}>oo</span>
+							<span className={style.titles} style={{ color: "#28cc8b" }}>
+								oo
+							</span>
 						</div>
-						<div className={style.titles} style={{ color: "#464545" }}>
-							
-						</div>
-						
-
+						<div className={style.titles} style={{ color: "#464545" }}></div>
 						<Row>
 							<Col span={24}>
 								{" "}
@@ -81,20 +79,23 @@ export default class ContentTop extends React.Component {
 						<Row style={{ color: "#2880F9" }}>
 							<Col span={7}>
 								{" "}
-								<div className={style.category}>VALIDER VOTRE TARIF
-								     <Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 800 }} ></Icon>
+								<div className={style.category}>
+									VALIDER VOTRE TARIF
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 800 }}></Icon>
 								</div>
 							</Col>
 							<Col span={9}>
 								{" "}
-								<div className={style.category}>CHOISISSEZ VOTRE TODOO
-								      <Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} ></Icon>
+								<div className={style.category}>
+									CHOISISSEZ VOTRE TODOO
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>RÉSERVEZ EN LIGNE
-								<Icon type="arrow-right"  style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} ></Icon>
+								<div className={style.category}>
+									RÉSERVEZ EN LIGNE
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 						</Row>
@@ -115,46 +116,72 @@ export default class ContentTop extends React.Component {
 						</div>
 						<p className={style.content} style={{ color: "#464545" }}>
 							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et
-							 recevoir un rabais de 20% sur votre premier ménage.
-
+							recevoir un rabais de 20% sur votre premier ménage.
 						</p>
 
 						<div style={{ paddingTop: "10px", paddingBottom: "50px" }}>
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "0px" }}>
+								{this.state.registerUser ? (
+									<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
+										<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} /> MERCI, vos informations sont
+										enregistrées
+									</div>
+								) : (
+									<Row>
+										<Col span={8}>
+											<Form.Item label="Prénom" className="Item">
+												{getFieldDecorator("firstName", {
+													rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+												})(
+													<Input
+														className="Inputs"
+														placeholder="Votre prénom"
+														onChange={e => {
+															this.handleChange(e);
+														}}
+														ref={input => (this.myinput = input)}
+													/>
+												)}
+											</Form.Item>
+										</Col>
 
-							{this.state.registerUser ? (
-								<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} /> MERCI, vos informations sont
-									enregistrées
-								</div>
-							) : (
-								<Row>
-									<Col span={8}>
-										<Form.Item label="Prénom" className="Item">
-											{getFieldDecorator("firstName", {
-												rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
-											})(<Input className="Inputs" placeholder="Votre prénom"  onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
-										</Form.Item>
-									</Col>
-									
-									<Col  span={15} style={{marginLeft: "30px"}}>
-										<Form.Item label="Courriel" className="Item">
-											{getFieldDecorator("email", {
-												rules: [{ required: true, message: "Le courriel ne peut pas être vide" }, {
-													type: 'email', message: "Le  E-mail n'est pas valide"}, {
-														validator: this.handleValidator
-													}]
-											})(<Input className="Inputs" placeholder="Votre courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
-											<span className={style.Formspan} >{isVisible && message_email}</span>
-										</Form.Item>
-									</Col>
-								</Row>
-								
-							)}
+										<Col span={15} offset={1}>
+											<Form.Item label="Courriel" className="Item">
+												{getFieldDecorator("email", {
+													rules: [
+														{ required: true, message: "Le courriel ne peut pas être vide" },
+														{
+															type: "email",
+															message: "Le  E-mail n'est pas valide"
+														},
+														{
+															validator: this.handleValidator
+														}
+													]
+												})(
+													<Input
+														className="Inputs"
+														placeholder="Votre courriel"
+														onChange={e => {
+															this.handleChange(e);
+														}}
+														ref={input => (this.myinput = input)}
+													/>
+												)}
+												<span className={style.Formspan}>{isVisible && message_email}</span>
+											</Form.Item>
+										</Col>
+									</Row>
+								)}
 
 								<div style={{ textAlign: "center", paddingBottom: "30px" }}>
-									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "20px", fontWeight: "600" }} type="primary" htmlType="submit" onClick={this.handleClick.bind(this)}>
-									   PRE-INSCRIPTION
+									<Button
+										style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "20px", fontWeight: "600" }}
+										type="primary"
+										htmlType="submit"
+										onClick={this.handleClick.bind(this)}
+									>
+										PRE-INSCRIPTION
 									</Button>
 								</div>
 							</Form>
