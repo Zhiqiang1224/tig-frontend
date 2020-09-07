@@ -67,7 +67,6 @@ export default class ContentTop extends React.Component {
 								oo
 							</span>
 						</div>
-						<div className={style.titles} style={{ color: "#464545" }}></div>
 						<Row>
 							<Col span={24}>
 								{" "}
@@ -76,12 +75,12 @@ export default class ContentTop extends React.Component {
 								</h2>
 							</Col>
 						</Row>
-						<Row style={{ color: "#2880F9" }}>
+						<Row style={{ color: "#2880F9", textAlign: "left", width: "1100px" }}>
 							<Col span={7}>
 								{" "}
 								<div className={style.category}>
 									VALIDER VOTRE TARIF
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 800 }}></Icon>
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={9}>
@@ -104,7 +103,7 @@ export default class ContentTop extends React.Component {
 							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
 						</p>
 						<Row>
-							<Col span={20}>
+							<Col span={24}>
 								{" "}
 								<h3 className={style.othertitle} style={{ color: "#464545" }}>
 									Devenez client VIP : C'est gratuit et sans engagement!
@@ -187,7 +186,7 @@ export default class ContentTop extends React.Component {
 							</Form>
 						</div>
 					</Col>
-					<Col span={10}>
+					<Col span={10} offset={2}>
 						<img src={menage_domicile_montreal} alt="Trouver une femme de ménage à Montréal" width="100%" className={style.Groupe} />
 					</Col>
 				</Row>
