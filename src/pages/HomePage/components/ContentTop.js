@@ -1,8 +1,31 @@
 import { Col, Form, Icon, Input, Row, Button } from "antd";
+import { WarningFilled } from '@ant-design/icons';
 import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
 const { Search } = Input;
+
+
+
+const suffix_error = (
+	<WarningFilled
+	  style={{
+		fontSize: 25,
+		color: 'red',
+	  }}
+	/>
+  );
+
+  const suffix_warning = (
+	<WarningFilled
+	  style={{
+		fontSize: 25,
+		color: '#f39c12',
+	  }}
+	/>
+  );
+
+
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
@@ -75,7 +98,7 @@ export default class ContentTop extends React.Component {
 								</h2>
 							</Col>
 						</Row>
-						<Row style={{ color: "#2880F9", textAlign: "left", width: "1100px" }}>
+						<Row style={{ color: "#2880F9", textAlign: "left", width: "1000px" }}>
 							<Col span={7}>
 								{" "}
 								<div className={style.category}>
@@ -130,8 +153,8 @@ export default class ContentTop extends React.Component {
 										<Col span={8}>
 											<Form.Item label="Prénom" className="Item">
 												{getFieldDecorator("firstName", {
-													rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
-												})(
+													rules: [{ required: true, message: "Le prénom est manquant"}]
+												} )(
 													<Input
 														className="Inputs"
 														placeholder="Votre prénom"
@@ -139,6 +162,7 @@ export default class ContentTop extends React.Component {
 															this.handleChange(e);
 														}}
 														ref={input => (this.myinput = input)}
+												       // suffix={suffix_error}
 													/>
 												)}
 											</Form.Item>
@@ -148,7 +172,7 @@ export default class ContentTop extends React.Component {
 											<Form.Item label="Courriel" className="Item">
 												{getFieldDecorator("email", {
 													rules: [
-														{ required: true, message: "Le courriel ne peut pas être vide" },
+														{ required: true, message: "Le courriel est manquant" },
 														{
 															type: "email",
 															message: "Le  E-mail n'est pas valide"
@@ -160,13 +184,16 @@ export default class ContentTop extends React.Component {
 												})(
 													<Input
 														className="Inputs"
+														
 														placeholder="Votre courriel"
 														onChange={e => {
 															this.handleChange(e);
 														}}
 														ref={input => (this.myinput = input)}
+														//suffix={suffix_warning}
 													/>
 												)}
+										 
 												<span className={style.Formspan}>{isVisible && message_email}</span>
 											</Form.Item>
 										</Col>

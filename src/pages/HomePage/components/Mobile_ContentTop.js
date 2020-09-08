@@ -144,7 +144,7 @@ export default class ContentTop extends React.Component {
 									<Form.Item label="Prénom" className="Item">
 										
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+											rules: [{ required: true, message: "Le prénom est manquant" }]
 										})(
 											<Input
 												className="Inputs"
@@ -161,7 +161,7 @@ export default class ContentTop extends React.Component {
 									<Form.Item label="Courriel" className="Item">
 										{getFieldDecorator("email", {
 											rules: [
-												{ required: true, message: "Le courriel ne peut pas être vide" },
+												{ required: true, message: "Le courriel est manquant" },
 												{
 													type: "email",
 													message: "Le  E-mail n'est pas valide"

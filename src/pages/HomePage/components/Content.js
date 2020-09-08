@@ -17,7 +17,7 @@ export default class Content extends React.Component {
 						</Col>
 						<Col span={12} offset={3}>
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF",marginBottom:"1px" }}>
-							Tiggidoo recherche des préposés à l’entretien ménager 
+							Tiggidoo recherche des préposés à l'entretien ménager 
 							 </h2>
 							 <h2 className={style.Showtitle} style={{ color: "#FFFFFF", marginTop:"0.5px", marginBottom:"3px" }}>
 							À vos moppes, ready, gOo!

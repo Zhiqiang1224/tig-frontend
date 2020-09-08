@@ -155,7 +155,7 @@ export default class ContentTop extends React.Component {
 								<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
 									<Form.Item label="Prénom" className="Item">
 										{getFieldDecorator("lastName", {
-											rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+											rules: [{ required: true, message: "Le prénom est manquant" }]
 										})(
 											<Input
 												className="Inputs"
@@ -170,7 +170,7 @@ export default class ContentTop extends React.Component {
 									</Form.Item>
 									<Form.Item label="Nom" className="Item">
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
+											rules: [{ required: true, message: "Le nom est manquant" }]
 										})(
 											<Input
 												className="Inputs"
@@ -208,7 +208,7 @@ export default class ContentTop extends React.Component {
 									</Form.Item>
 									<Form.Item label="Téléphone" className="Item">
 										{getFieldDecorator("telephone", {
-											rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
+											rules: [{ required: true, message: "Le téléphone est manquant" }]
 										})(
 											<Input
 												className="Inputs"

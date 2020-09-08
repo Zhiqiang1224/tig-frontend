@@ -158,12 +158,12 @@ export default class ContentTop extends React.Component {
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
 							    <Form.Item label="Prénom" className="Item">
 									{getFieldDecorator("lastName", {
-										rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
+										rules: [{ required: true, message: "Le prénom est manquant" }]
 									})(<Input className="Inputs" placeholder="Votre prénom" id="error" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="Nom" className="Item">
 									{getFieldDecorator("firstName", {
-										rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
+										rules: [{ required: true, message: "Le nom est manquant" }]
 									})(<Input className="Inputs" placeholder="Votre Nom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
 								<Form.Item label="Courriel" className="Item">
@@ -177,7 +177,7 @@ export default class ContentTop extends React.Component {
 								</Form.Item>
 								<Form.Item label="Téléphone" className="Item">
 									{getFieldDecorator("telephone", {
-										rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
+										rules: [{ required: true, message: "Le téléphone est manquant" }]
 									})(<Input className="Inputs" placeholder="Votre N° de téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 									<span className={style.Formspan} >{message_tel}</span>
 								</Form.Item>
