@@ -91,33 +91,32 @@ export default class ContentTop extends React.Component {
 							</span>
 						</div>
 						<Row>
-							<Col span={24}>
+							<Col span={23}>
 								{" "}
 								<h2 className={style.smalltitle} style={{ color: "#464545" }}>
 									Trouvez votre expert en entretien ménager résidentiel,c'est simple!
 								</h2>
 							</Col>
 						</Row>
-						<Row style={{ color: "#2880F9", textAlign: "left", width: "1000px" }}>
+						<Row style={{ color: "#2880F9", textAlign: "left", width: "950px" }}>
 							<Col span={7}>
 								{" "}
-								<div className={style.category}>
+								<div className={style.category} style={{ marginLeft: "5px", marginTop: "0px" }}>
 									VALIDER VOTRE TARIF
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
-								</div>
-							</Col>
-							<Col span={9}>
-								{" "}
-								<div className={style.category}>
-									CHOISISSEZ VOTRE TODOO
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "5px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category}>
+								<div className={style.category} style={{ marginLeft: "4px", marginTop: "9px" }}>
+									CHOISISSEZ VOTRE TODOO
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "3px", marginTop: "5px", fontWeight: 700 }}></Icon>
+								</div>
+							</Col>
+							<Col span={8}>
+								{" "}
+								<div className={style.category} style={{ marginLeft: "7px", marginTop: "10px" }}>
 									RÉSERVEZ EN LIGNE
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 						</Row>
