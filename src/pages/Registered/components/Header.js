@@ -5,7 +5,9 @@ import Link from "umi/link";
 @Form.create()
 export default class Header extends React.Component {
 	state = {};
-	componentDidMount = async () => {};
+	componentDidMount = async () => {
+		window.scrollTo(0, 0)
+	};
 
 	render() {
 		return (
