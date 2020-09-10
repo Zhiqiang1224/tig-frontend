@@ -14,7 +14,7 @@ export default class Content extends React.Component {
 					<Row>
 						<Col span={21} offset={1}>
 							<h2 className={style.Mobile_Showtitle} style={{ color: "#FFFFFF" }}>
-								Vous êtes un professionnel préposé au ménage ?
+							Tiggidoo recherche des préposés à l'entretien ménager. À vos moppes, ready, gOo!
 							</h2>
 						</Col>
 					</Row>
@@ -27,7 +27,7 @@ export default class Content extends React.Component {
 					<Row>
 						<Col span={20} offset={1}>
 							<h3 className={style.Mobile_Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								Devenez un ToDoo !
+								Devenez un Todoo
 							</h3>
 							<p className={style.Mobile_Showcontent} style={{ color: "#FFFFFF" }}>
 								Gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.

@@ -107,7 +107,7 @@ export default class ContentTop extends React.Component {
 							<Col span={22} offset={1}>
 								{" "}
 								<h1 className={style.Mobile_title} style={{ color: "#464545" }}>
-									Vous êtes travailleurs autonome dans le service ménagé résidentiel ?
+							 	Proposez vos services comme aide de ménage
 								</h1>
 							</Col>
 						</Row>
@@ -115,20 +115,13 @@ export default class ContentTop extends React.Component {
 						<Row>
 							<Col span={22} offset={1}>
 								{" "}
-								<h3 className={style.Mobile_smalltitle} style={{ color: "#2880F9", fontWeight: "bold" }}>
+								<h3 className={style.Mobile_smalltitle} style={{ color: "#2880F9", fontSize: "18px",fontWeight: "bold" }}>
 									Gagnez des revenus additionnels, rejoignez Tiggidoo
 								</h3>
 							</Col>
 						</Row>
 
-						<Row>
-							<Col span={20} offset={1}>
-								<p className={style.Mobile_content} style={{ color: "#464545" }}>
-									Laissez nous vos coordonnées, dès que le recrutement sera opérationnel, un de nos experts vous préviendra en avant première
-								</p>
-							</Col>
-						</Row>
-
+			
 						<Row style={{ marginTop: "20px" }}>
 							<Col span={22} offset={1}>
 								<p style={{ color: "#4D4D4D", fontSize: "15px", fontFamily: "Avenir", fontWeight: "bold" }}>
@@ -146,6 +139,15 @@ export default class ContentTop extends React.Component {
 								<p style={{ color: "#4D4D4D", fontSize: "15px", fontFamily: "Avenir", fontWeight: "bold" }}>
 									<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
 									Soutien professionnel et formations
+								</p>
+							</Col>
+						</Row>
+
+						<Row>
+							<Col span={20} offset={1}>
+								<p className={style.Mobile_content} style={{ color: "#464545" }}>
+								      On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos
+									  coordonnées afin de vous contacter en avant première lors du lancement
 								</p>
 							</Col>
 						</Row>

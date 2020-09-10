@@ -151,7 +151,7 @@ export default class ContentTop extends React.Component {
 											On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos
 											coordonnées afin de vous contacter en avant première lors du lancement
 									</p>
-							</Col>
+						    	</Col>
 							</Row>
 						</Col>
 						<Col span={9} offset={1}>

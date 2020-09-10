@@ -60,12 +60,19 @@ export default class ContentTop extends React.Component {
 			<div>
 				<Row>
 					<Col span={22} offset={1}>
-						<div className={style.Mobile_title} style={{ color: "#464545" }}>
+						{/* <div className={style.Mobile_title} style={{ color: "#464545" }}>
 							Pas le temps, ni le goût
 						</div>
 						<div className={style.Mobile_titles} style={{ color: "#464545" }}>
 							<span>C’est Tiggid</span>
 							<span style={{ color: "#28cc8b" }}>oo</span>
+						</div> */}
+						<div className={style.Mobile_title} style={{ color: "#464545" }}>
+							Pas le temps, ni le goût
+							<span className={style.Mobile_title_big}> C’est Tiggid</span>
+							<span className={style.Mobile_title_big} style={{ color: "#28cc8b" }}>
+								oo
+							</span>
 						</div>
 					</Col>
 				</Row>
@@ -81,7 +88,7 @@ export default class ContentTop extends React.Component {
 						</h2>
 					</Col>
 				</Row>
-				<Row style={{ color: "#2880F9", marginTop: "30px" }}>
+				<Row style={{ color: "#2880F9", marginTop: "15px" }}>
 					<Col span={22} offset={1}>
 						{" "}
 						<div className={style.Mobile_category}>VALIDER VOTRE TARIF</div>
