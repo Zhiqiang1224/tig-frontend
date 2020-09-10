@@ -38,7 +38,7 @@ export default class Footer extends React.Component {
 						</Col>
 					</Row>
 					<Row style={{ textAlign: "center" }}>
-						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "80px", paddingBottom: "20px" }}>Copiright 2020 Tout droit réservé</div>
+						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "80px", paddingBottom: "20px" }}>Copiright 2020 Touts droits réservés</div>
 					</Row>
 				</div>
 			</div>

@@ -18,7 +18,7 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col span={5}>
 						<img src={logo_tiggidoo_blanc} alt="Service de ménage à domicile au Quebec" width="230px" style={{ marginTop: "200px" }} />
-						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>Copiright 2020 Tout droit réservé</div>
+						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>Copiright 2020 Touts droits réservés</div>
 					</Col>
 					<Col span={6} offset={4}>
 						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>SUIVEZ-NOUS</div>
