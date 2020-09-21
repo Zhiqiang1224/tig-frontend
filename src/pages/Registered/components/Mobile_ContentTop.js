@@ -68,7 +68,7 @@ export default class ContentTop extends React.Component {
 					if (data.data.error == "The email is already exist") {
 						this.setState({
 							register: false,
-							message_email: "Ce courriel est déja existant dans la base",
+							message_email: 	this.state.language.Text_51,
 							message_tel: ""
 						});
 					}
@@ -76,7 +76,7 @@ export default class ContentTop extends React.Component {
 					if (data.data.error == "The telephone is already exist") {
 						this.setState({
 							register: false,
-							message_tel: "Ce téléphone est déja existant dans la base",
+							message_tel: 	this.state.language.Text_51,
 							message_email: ""
 						});
 					}
@@ -96,16 +96,16 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Mobile_Othertitle} style={{ color: "#2880FB" }}>
-							Merci, {this.state.lastName}
+						{this.state.language.Text_46}, {this.state.lastName}
 						</h1>
 						<h1 className={style.Mobile_Othersmalltitle} style={{ color: "#4D4D4D" }}>
-							Un de nos experts prendra contact avec <br />
-							vous dès que le recrutement sera lancé
+						{this.state.language.Text_47} <br />
+						{this.state.language.Text_48}
 						</h1>
 						<div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
 							{" "}
 							<Link to="/">
-								<span className={style.buttonaccueil}>ACCUEIL</span>
+								<span className={style.buttonaccueil}>{this.state.language.Text_49}</span>
 							</Link>
 						</div>
 					</Row>
@@ -164,7 +164,7 @@ export default class ContentTop extends React.Component {
 								<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
 									<Form.Item label={this.state.language.Text_41} className="Item">
 										{getFieldDecorator("lastName", {
-											rules: [{ required: true, message: "Le prénom est manquant" }]
+											rules: [{ required: true, message:  this.state.language.Text_31 }]
 										})(
 											<Input
 												className="Inputs"
@@ -179,7 +179,7 @@ export default class ContentTop extends React.Component {
 									</Form.Item>
 									<Form.Item label={this.state.language.Text_13} className="Item">
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "Le nom est manquant" }]
+											rules: [{ required: true, message:  this.state.language.Text_52 }]
 										})(
 											<Input
 												className="Inputs"
@@ -194,10 +194,10 @@ export default class ContentTop extends React.Component {
 									<Form.Item label={this.state.language.Text_14} className="Item">
 										{getFieldDecorator("email", {
 											rules: [
-												{ required: true, message: "Le courriel ne peut pas être vide" },
+												{ required: true, message: this.state.language.Text_32 },
 												{
 													type: "email",
-													message: "Le  E-mail n'est pas valide"
+													message: this.state.language.Text_50
 												},
 												{
 													validator: this.handleValidator
@@ -217,7 +217,7 @@ export default class ContentTop extends React.Component {
 									</Form.Item>
 									<Form.Item label={this.state.language.Text_43} className="Item">
 										{getFieldDecorator("telephone", {
-											rules: [{ required: true, message: "Le téléphone est manquant" }]
+											rules: [{ required: true, message: this.state.language.Text_53 }]
 										})(
 											<Input
 												className="Inputs"

@@ -55,6 +55,17 @@ const LanguageText = {
 		Text_43: "Téléphone",
 		Text_44: "Votre N° de téléphone",
 		Text_45: "Je rejoins Tiggidoo",
+		Text_46: "Merci",
+		Text_47: "Un de nos experts prendra contact avec",
+		Text_48: "vous dès que le recrutement sera lancé",
+		Text_49: "ACCUEIL",
+
+		/** warning message  */
+		Text_50: "Le courriel n'est pas valide",
+		Text_51: "Ce courriel est déja existant dans la base",
+		Text_52: "Le prénom est manquant",
+		Text_53: "Le téléphone est manquant",
+		Text_53: "Ce téléphone est déja existant dans la base",
 	},
 	En: {
 		/**  page d'accueil */
@@ -93,7 +104,7 @@ const LanguageText = {
 		Text_29: "FOLLOW US",
 		Text_30: "Copyright 2020 All rights reserved",
 		//  message
-		Text_31: "The first name is required",
+		Text_31: "The last name is required",
 		Text_32: "The email is required",
 		Text_33: "THANK YOU, your information is saved",
         /**  form page of register pro  */
@@ -109,6 +120,17 @@ const LanguageText = {
 		Text_43: "Phone",
 		Text_44: "Your phone number",
 		Text_45: "I join Tiggidoo",
+		Text_46: "Thank you",
+		Text_47: "One of our experts will contact",
+		Text_48: "you as soon as the recruitment is launched",
+		Text_49: "HOME",
+
+		/** warning message  */
+		Text_50: "The E-mail is not valid",
+		Text_51: "This email is already in the database",
+		Text_52: "The first name required",
+		Text_53: "The phone number is required",
+		Text_54: "This phone is already in the database",
 	}
 };
 export default LanguageText;

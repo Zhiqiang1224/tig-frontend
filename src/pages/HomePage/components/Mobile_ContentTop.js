@@ -47,7 +47,7 @@ export default class ContentTop extends React.Component {
 					if (data.data.error == "The email is already exist") {
 						this.setState({
 							registerUser: false,
-							message_email: "Ce courriel est déja existant dans la base"
+							message_email: this.state.language.Text_51
 						});
 					}
 				}
@@ -64,13 +64,6 @@ export default class ContentTop extends React.Component {
 			<div>
 				<Row>
 					<Col span={22} offset={1}>
-						{/* <div className={style.Mobile_title} style={{ color: "#464545" }}>
-							Pas le temps, ni le goût
-						</div>
-						<div className={style.Mobile_titles} style={{ color: "#464545" }}>
-							<span>C’est Tiggid</span>
-							<span style={{ color: "#28cc8b" }}>oo</span>
-						</div> */}
 						<div className={style.Mobile_title} style={{ color: "#464545" }}>
 							{this.state.language.Text_2}
 							<span className={style.Mobile_title_big}> {this.state.language.Text_3}</span>
@@ -151,7 +144,7 @@ export default class ContentTop extends React.Component {
 								<Row>
 									<Form.Item label={this.state.language.Text_13} className="Item">
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "{this.state.language.Text_33}" }]
+											rules: [{ required: true, message: this.state.language.Text_31 }]
 										})(
 											<Input
 												className="Inputs"
@@ -168,10 +161,10 @@ export default class ContentTop extends React.Component {
 									<Form.Item label={this.state.language.Text_14} className="Item">
 										{getFieldDecorator("email", {
 											rules: [
-												{ required: true, message: "Le courriel est manquant" },
+												{ required: true, message: this.state.language.Text_32 },
 												{
 													type: "email",
-													message: "Le  E-mail n'est pas valide"
+													message: this.state.language.Text_50
 												},
 												{
 													validator: this.handleValidator
