@@ -4,10 +4,18 @@ import logo_tiggidoo_blanc from "../../../assets/logo_tiggidoo_blanc.svg";
 import Plantes from '../../../assets/Plantes.svg'
 import style from "../index.less";
 
+import LanguageText from "../../../assets/Langue/Language";
+let storage = window.localStorage;
+
 @Form.create()
 export default class Footer extends React.Component {
-	state = {};
-	componentDidMount = async () => {};
+	state = {
+		language: LanguageText.French
+	};
+
+	componentDidMount = async () => {
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+	};
 
 	render() {
 		return (
@@ -18,10 +26,10 @@ export default class Footer extends React.Component {
 					</Col>
 					<Col span={5}>
 						<img src={logo_tiggidoo_blanc} alt="Service de ménage à domicile au Quebec" width="230px" style={{ marginTop: "200px" }} />
-						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>Copiright 2020 Touts droits réservés</div>
+						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>{this.state.language.Text_30}</div>
 					</Col>
 					<Col span={6} offset={4}>
-						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>SUIVEZ-NOUS</div>
+						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>{this.state.language.Text_29}</div>
 						<div style={{ color: "#ffffff", fontSize: "60px" }}>
 						<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
 							<Icon style={{ color: "#ffffff", fontSize: "45px" }} type="facebook" alt="Facebook de Tiggidoo" />

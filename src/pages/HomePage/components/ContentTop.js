@@ -87,7 +87,7 @@ export default class ContentTop extends React.Component {
 					<Col span={11} offset={1}>
 						<div className={style.title} style={{ color: "#464545" }}>
 							{this.state.language.Text_2}
-							<span className={style.titles}>{this.state.language.Text_3}</span>
+							<span className={style.titles}> {this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
 								oo
 							</span>
@@ -150,13 +150,13 @@ export default class ContentTop extends React.Component {
 								) : (
 									<Row>
 										<Col span={8}>
-											<Form.Item label="Prénom" className="Item">
+											<Form.Item label={this.state.language.Text_13} className="Item">
 												{getFieldDecorator("firstName", {
 													rules: [{ required: true, message: "Le prénom est manquant" }]
 												})(
 													<Input
 														className="Inputs"
-														placeholder="Votre prénom"
+														placeholder={this.state.language.Text_15}
 														onChange={e => {
 															this.handleChange(e);
 														}}
@@ -168,7 +168,7 @@ export default class ContentTop extends React.Component {
 										</Col>
 
 										<Col span={15} offset={1}>
-											<Form.Item label="Courriel" className="Item">
+											<Form.Item label={this.state.language.Text_14} className="Item">
 												{getFieldDecorator("email", {
 													rules: [
 														{ required: true, message: "Le courriel est manquant" },
@@ -183,7 +183,7 @@ export default class ContentTop extends React.Component {
 												})(
 													<Input
 														className="Inputs"
-														placeholder="Votre courriel"
+														placeholder={this.state.language.Text_16}
 														onChange={e => {
 															this.handleChange(e);
 														}}

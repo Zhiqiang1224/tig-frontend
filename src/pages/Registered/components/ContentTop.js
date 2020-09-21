@@ -3,6 +3,8 @@ import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.s
 import * as service from "../../../service/api";
 import style from "../index.less";
 import Link from "umi/link";
+let storage = window.localStorage;
+import LanguageText from "../../../assets/Langue/Language";
 const { Search } = Input;
 const formItemLayout = {
 	labelCol: {
@@ -21,7 +23,8 @@ export default class ContentTop extends React.Component {
 		registerPro: false,
 		message_email: "",
 		message_tel: "",
-		isVisible : true
+		isVisible : true,
+		language: LanguageText.French
 	};
 
 	
@@ -36,7 +39,10 @@ export default class ContentTop extends React.Component {
 		this.setState({isVisible: true});
 	}
 
-	componentDidMount = async () => {};
+	componentDidMount = async () => {
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+	};
+
 	handleSubmit = async e => {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll(async (err, values) => {
@@ -109,7 +115,7 @@ export default class ContentTop extends React.Component {
 						<Col span={11} offset={1}>
 							<Row>
 								<h1 className={style.title} style={{ color: "#464545" }}>
-									Proposez vos services comme aide de ménage
+								{this.state.language.Text_34}
 								</h1>
 							</Row>
 							<Row>
@@ -118,7 +124,7 @@ export default class ContentTop extends React.Component {
 									<Row>
 										<Col span={30}>
 										<h3 className={style.smalltitle} style={{ color: "#2880F9", fontWeight:"bold" }}>
-											Gagnez des revenus additionnels, rejoignez Tiggidoo
+										{this.state.language.Text_35}
 										</h3>
 										</Col>
 									</Row>
@@ -129,61 +135,60 @@ export default class ContentTop extends React.Component {
 								<Col>
 									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Horaire de travail flexible
+										{this.state.language.Text_36}
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Facturation simple et centralisée
+										{this.state.language.Text_37}
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Outils de gestion et calendrier intégrés
+										{this.state.language.Text_38}
 									</p>
 									<p style={{ color: "#4D4D4D", fontSize: "23px", fontFamily: "Avenir", fontWeight: "bold" }}>
 										<Icon type="check" style={{ marginRight: "15px", color: "#2880F9" }} />
-										Soutien professionnel et formations 
+										{this.state.language.Text_39}
 									</p>
 								</Col>
 							</Row>
 							<Row>
 								<Col span={23}>
 									<p className={style.content} style={{ color: "#464545" }}>
-											On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos
-											coordonnées afin de vous contacter en avant première lors du lancement
+									{this.state.language.Text_40}
 									</p>
 						    	</Col>
 							</Row>
 						</Col>
 						<Col span={9} offset={1}>
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
-							    <Form.Item label="Prénom" className="Item">
+							    <Form.Item label={this.state.language.Text_41} className="Item">
 									{getFieldDecorator("lastName", {
 										rules: [{ required: true, message: "Le prénom est manquant" }]
-									})(<Input className="Inputs" placeholder="Votre prénom" id="error" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder={this.state.language.Text_42} id="error" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
-								<Form.Item label="Nom" className="Item">
+								<Form.Item label={this.state.language.Text_13} className="Item">
 									{getFieldDecorator("firstName", {
 										rules: [{ required: true, message: "Le nom est manquant" }]
-									})(<Input className="Inputs" placeholder="Votre Nom" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder={this.state.language.Text_15} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 								</Form.Item>
-								<Form.Item label="Courriel" className="Item">
+								<Form.Item label={this.state.language.Text_14} className="Item">
 									{getFieldDecorator("email", {
 										rules: [{ required: true, message: "Le courriel ne peut pas être vide" }, {
 											type: 'email', message: "Le  E-mail n'est pas valide"}, {
 												validator: this.handleValidator
 											}]
-									})(<Input className="Inputs" placeholder="Votre courriel" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
+									})(<Input className="Inputs" placeholder={this.state.language.Text_16} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
 									<span className={style.Formspan} >{message_email}</span>
 								</Form.Item>
-								<Form.Item label="Téléphone" className="Item">
+								<Form.Item label={this.state.language.Text_43} className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: "Le téléphone est manquant" }]
-									})(<Input className="Inputs" placeholder="Votre N° de téléphone" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(<Input className="Inputs" placeholder={this.state.language.Text_44} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
 									<span className={style.Formspan} >{message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 									<Button style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "40px", fontWeight: "600" }} type="primary" htmlType="submit" onClick={this.handleClick.bind(this)}>
-									   Je  rejoins  Tiggidoo
+									{this.state.language.Text_45}
 									</Button>
 								</div>
 							</Form>

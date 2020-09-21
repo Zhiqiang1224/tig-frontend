@@ -145,17 +145,17 @@ export default class ContentTop extends React.Component {
 							{this.state.registerUser ? (
 								<div className={style.Mobile_sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
 									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700, verticalAlign: "middle" }} />
-									<p> MERCI, vos informations sont enregistrées</p>
+									<p>{this.state.language.Text_33}</p>
 								</div>
 							) : (
 								<Row>
-									<Form.Item label="Prénom" className="Item">
+									<Form.Item label={this.state.language.Text_13} className="Item">
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "Le prénom est manquant" }]
+											rules: [{ required: true, message: "{this.state.language.Text_33}" }]
 										})(
 											<Input
 												className="Inputs"
-												placeholder="Votre prénom"
+												placeholder={this.state.language.Text_15}
 												id="error"
 												onChange={e => {
 													this.handleChange(e);
@@ -165,7 +165,7 @@ export default class ContentTop extends React.Component {
 										)}
 									</Form.Item>
 
-									<Form.Item label="Courriel" className="Item">
+									<Form.Item label={this.state.language.Text_14} className="Item">
 										{getFieldDecorator("email", {
 											rules: [
 												{ required: true, message: "Le courriel est manquant" },
@@ -180,7 +180,7 @@ export default class ContentTop extends React.Component {
 										})(
 											<Input
 												className="Inputs"
-												placeholder="Votre courriel"
+												placeholder={this.state.language.Text_16}
 												onChange={e => {
 													this.handleChange(e);
 												}}
