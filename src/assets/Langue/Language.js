@@ -65,7 +65,9 @@ const LanguageText = {
 		Text_51: "Ce courriel est déja existant dans la base",
 		Text_52: "Le prénom est manquant",
 		Text_53: "Le téléphone est manquant",
-		Text_53: "Ce téléphone est déja existant dans la base",
+		Text_54: "Ce téléphone est déja existant dans la base",
+
+		Text_55: "ENVOYER"
 	},
 	En: {
 		/**  page d'accueil */
@@ -131,6 +133,8 @@ const LanguageText = {
 		Text_52: "The first name required",
 		Text_53: "The phone number is required",
 		Text_54: "This phone is already in the database",
+
+		Text_55: "SEND"
 	}
 };
 export default LanguageText;

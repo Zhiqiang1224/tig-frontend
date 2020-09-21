@@ -187,7 +187,7 @@ export default class ContentTop extends React.Component {
 							<div style={{ textAlign: "center", marginTop: "20px" }}>
 								<Col span={21} offset={1}>
 									<Button type="primary" style={{ width: "196px", height: "46px", fontSize: "18px" }} htmlType="submit" onClick={this.handleClick.bind(this)}>
-										ENVOYER
+									{this.state.language.Text_55}
 									</Button>
 								</Col>
 							</div>

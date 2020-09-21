@@ -76,7 +76,7 @@ export default class ContentTop extends React.Component {
 					if (data.data.error == "The telephone is already exist") {
 						this.setState({
 							register: false,
-							message_tel: 	this.state.language.Text_51,
+							message_tel: 	this.state.language.Text_54,
 							message_email: ""
 						});
 					}
@@ -244,101 +244,6 @@ export default class ContentTop extends React.Component {
 							</Col>
 						</Row>
 
-						{/* <Row>
-							<Col span={11} offset={1}>
-					
-								<Row>
-									<Col span={23}>
-										<p className={style.content} style={{ color: "#464545" }}>
-											On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos coordonnées afin de vous contacter en avant première lors du
-											lancement
-										</p>
-									</Col>
-								</Row>
-							</Col>
-							<Col span={9} offset={1}>
-								<Form onSubmit={this.handleSubmit} style={{ marginTop: "100px" }}>
-									<Form.Item label="Prénom" className="Item">
-										{getFieldDecorator("lastName", {
-											rules: [{ required: true, message: "Le prénom ne peut pas être vide" }]
-										})(
-											<Input
-												className="Inputs"
-												placeholder="Votre prénom"
-												id="error"
-												onChange={e => {
-													this.handleChange(e);
-												}}
-												ref={input => (this.myinput = input)}
-											/>
-										)}
-									</Form.Item>
-									<Form.Item label="Nom" className="Item">
-										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: "Le nom ne peut pas être vide" }]
-										})(
-											<Input
-												className="Inputs"
-												placeholder="Votre Nom"
-												onChange={e => {
-													this.handleChange(e);
-												}}
-												ref={input => (this.myinput = input)}
-											/>
-										)}
-									</Form.Item>
-									<Form.Item label="Courriel" className="Item">
-										{getFieldDecorator("email", {
-											rules: [
-												{ required: true, message: "Le courriel ne peut pas être vide" },
-												{
-													type: "email",
-													message: "Le  E-mail n'est pas valide"
-												},
-												{
-													validator: this.handleValidator
-												}
-											]
-										})(
-											<Input
-												className="Inputs"
-												placeholder="Votre courriel"
-												onChange={e => {
-													this.handleChange(e);
-												}}
-												ref={input => (this.myinput = input)}
-											/>
-										)}
-										<span className={style.Formspan}>{isVisible && message_email}</span>
-									</Form.Item>
-									<Form.Item label="Téléphone" className="Item">
-										{getFieldDecorator("telephone", {
-											rules: [{ required: true, message: "Le téléphone  ne peut pas être vide" }]
-										})(
-											<Input
-												className="Inputs"
-												placeholder="Votre N° de téléphone"
-												onChange={e => {
-													this.handleChange(e);
-												}}
-												ref={input => (this.myinput = input)}
-											/>
-										)}
-										<span className={style.Formspan}>{isVisible && message_tel}</span>
-									</Form.Item>
-									<div style={{ textAlign: "center", paddingBottom: "40px" }}>
-										<Button
-											style={{ width: "100%", height: "60px", fontSize: "23px", marginTop: "40px", fontWeight: "600" }}
-											type="primary"
-											htmlType="submit"
-											onClick={this.handleClick.bind(this)}
-										>
-											Je rejoins Tiggidoo
-										</Button>
-									</div>
-								</Form>
-							</Col>
-						</Row> */}
 					</div>
 				)}
 			</div>
