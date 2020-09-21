@@ -2,25 +2,29 @@ import { Col, Form, Icon, Input, Row, Button } from "antd";
 import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
-const { Search } = Input;
+import LanguageText from "../../../assets/Langue/Language";
+let storage = window.localStorage;
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
-		firstName: '',
+		firstName: "",
 		registerUser: false,
 		message_email: "",
-		isVisible : true
+		isVisible: true,
+		language: LanguageText.French
 	};
 
-	handleChange (e) {
-		this.setState({isVisible: false})
+	handleChange(e) {
+		this.setState({ isVisible: false });
 	}
 
-	handleClick () {
-		this.setState({isVisible: true})
+	handleClick() {
+		this.setState({ isVisible: true });
 	}
 
-	componentDidMount = async () => {};
+	componentDidMount = async () => {
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+	};
 	handleSubmit = async e => {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll(async (err, values) => {
@@ -28,7 +32,7 @@ export default class ContentTop extends React.Component {
 				console.log("Received values of form: ", values);
 				let p = {
 					firstName: values.firstName,
-					email: values.email	
+					email: values.email
 				};
 				let data = await service.registerUser(p);
 				console.log(data);
@@ -39,11 +43,11 @@ export default class ContentTop extends React.Component {
 						message: "ACCUEIL"
 					});
 				}
-				if (data.code !== 200 ) {
-					if(data.data.error == "The email is already exist"){
-                        this.setState({
+				if (data.code !== 200) {
+					if (data.data.error == "The email is already exist") {
+						this.setState({
 							registerUser: false,
-							message_email: "Ce courriel est déja existant dans la base",
+							message_email: "Ce courriel est déja existant dans la base"
 						});
 					}
 				}
@@ -68,8 +72,8 @@ export default class ContentTop extends React.Component {
 							<span style={{ color: "#28cc8b" }}>oo</span>
 						</div> */}
 						<div className={style.Mobile_title} style={{ color: "#464545" }}>
-							Pas le temps, ni le goût
-							<span className={style.Mobile_title_big}> C’est Tiggid</span>
+							{this.state.language.Text_2}
+							<span className={style.Mobile_title_big}> {this.state.language.Text_3}</span>
 							<span className={style.Mobile_title_big} style={{ color: "#28cc8b" }}>
 								oo
 							</span>
@@ -84,30 +88,29 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={22} offset={1}>
 						<h2 className={style.Mobile_smalltitle} style={{ color: "#464545" }}>
-							Trouvez votre expert en entretien ménager résidentiel
+							{this.state.language.Text_4}
 						</h2>
 					</Col>
 				</Row>
 				<Row style={{ color: "#2880F9", marginTop: "15px" }}>
 					<Col span={22} offset={1}>
 						{" "}
-						<div className={style.Mobile_category}>VALIDER VOTRE TARIF</div>
+						<div className={style.Mobile_category}> {this.state.language.Text_5}</div>
 					</Col>
 					<Col span={22} offset={1}>
 						{" "}
-						<div className={style.Mobile_category}>CHOISISSEZ VOTRE TODOO</div>
+						<div className={style.Mobile_category}> {this.state.language.Text_6}</div>
 					</Col>
 					<Col span={22} offset={1}>
 						{" "}
-						<div className={style.Mobile_category}>RÉSERVEZ EN LIGNE</div>
+						<div className={style.Mobile_category}> {this.state.language.Text_7}</div>
 					</Col>
 				</Row>
 
 				<Row>
 					<Col span={21} offset={1}>
 						<p className={style.Mobile_content} style={{ color: "#4D4D4D" }}>
-							Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié
-							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
+							{this.state.language.Text_8}
 						</p>
 					</Col>
 				</Row>
@@ -115,7 +118,7 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={21} offset={1}>
 						<h3 className={style.Mobile_othertitle} style={{ color: "#464545" }}>
-							Devenez client VIP : C'est gratuit et sans engagement!
+							{this.state.language.Text_12}
 						</h3>
 					</Col>
 				</Row>
@@ -123,7 +126,7 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={21} offset={1}>
 						<div className={style.Mobile_category} style={{ color: "#2880F9" }}>
-							PRÉ-INSCRIPTION : - 20%
+							{this.state.language.Text_10}
 						</div>
 					</Col>
 				</Row>
@@ -131,25 +134,22 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={21} offset={1}>
 						<p className={style.Mobile_content} style={{ color: "#4D4D4D" }}>
-							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et
-							recevoir un rabais de 20% sur votre premier ménage.
+							{this.state.language.Text_11}
 						</p>
 					</Col>
 				</Row>
 
-				<Row >
+				<Row>
 					<Col span={21} offset={1}>
 						<Form onSubmit={this.handleSubmit} style={{ marginTop: "30px" }}>
-						{this.state.registerUser ? (
+							{this.state.registerUser ? (
 								<div className={style.Mobile_sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700,  verticalAlign: 'middle' }} />
-									<p> MERCI, vos informations sont
-									 enregistrées</p>
+									<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700, verticalAlign: "middle" }} />
+									<p> MERCI, vos informations sont enregistrées</p>
 								</div>
 							) : (
 								<Row>
 									<Form.Item label="Prénom" className="Item">
-										
 										{getFieldDecorator("firstName", {
 											rules: [{ required: true, message: "Le prénom est manquant" }]
 										})(
@@ -164,7 +164,7 @@ export default class ContentTop extends React.Component {
 											/>
 										)}
 									</Form.Item>
-									
+
 									<Form.Item label="Courriel" className="Item">
 										{getFieldDecorator("email", {
 											rules: [
@@ -189,18 +189,18 @@ export default class ContentTop extends React.Component {
 										)}
 										<span className={style.Formspan}>{isVisible && message_email}</span>
 									</Form.Item>
-									</Row>
-								)}
-									<div style={{ textAlign: "center", marginTop: "20px" }}>
-										<Col span={21} offset={1}>
-											<Button type="primary" style={{ width: "196px", height: "46px", fontSize: "18px" }} htmlType="submit" onClick={this.handleClick.bind(this)}>
-												ENVOYER
-											</Button>
-										</Col>
-									</div>
-								</Form>
+								</Row>
+							)}
+							<div style={{ textAlign: "center", marginTop: "20px" }}>
+								<Col span={21} offset={1}>
+									<Button type="primary" style={{ width: "196px", height: "46px", fontSize: "18px" }} htmlType="submit" onClick={this.handleClick.bind(this)}>
+										ENVOYER
+									</Button>
+								</Col>
+							</div>
+						</Form>
 					</Col>
-				</Row>				
+				</Row>
 			</div>
 		);
 	}

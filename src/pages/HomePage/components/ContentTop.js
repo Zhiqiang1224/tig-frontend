@@ -1,30 +1,29 @@
 import { Col, Form, Icon, Input, Row, Button } from "antd";
-import { WarningFilled } from '@ant-design/icons';
+import { WarningFilled } from "@ant-design/icons";
 import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.svg";
 import * as service from "../../../service/api";
 import style from "../index.less";
+import LanguageText from "../../../assets/Langue/Language";
+let storage = window.localStorage;
 const { Search } = Input;
-
-
 
 const suffix_error = (
 	<WarningFilled
-	  style={{
-		fontSize: 25,
-		color: 'red',
-	  }}
+		style={{
+			fontSize: 25,
+			color: "red"
+		}}
 	/>
-  );
+);
 
-  const suffix_warning = (
+const suffix_warning = (
 	<WarningFilled
-	  style={{
-		fontSize: 25,
-		color: '#f39c12',
-	  }}
+		style={{
+			fontSize: 25,
+			color: "#f39c12"
+		}}
 	/>
-  );
-
+);
 
 @Form.create()
 export default class ContentTop extends React.Component {
@@ -32,7 +31,8 @@ export default class ContentTop extends React.Component {
 		firstName: "",
 		registerUser: false,
 		message_email: "",
-		isVisible: true
+		isVisible: true,
+		language: LanguageText.French
 	};
 
 	handleChange(e) {
@@ -43,7 +43,9 @@ export default class ContentTop extends React.Component {
 		this.setState({ isVisible: true });
 	}
 
-	componentDidMount = async () => {};
+	componentDidMount = async () => {
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+	};
 	handleSubmit = async e => {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll(async (err, values) => {
@@ -84,8 +86,8 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={11} offset={1}>
 						<div className={style.title} style={{ color: "#464545" }}>
-							Pas le temps, ni le goût
-							<span className={style.titles}> C’est Tiggid</span>
+							{this.state.language.Text_2}
+							<span className={style.titles}>{this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
 								oo
 							</span>
@@ -94,7 +96,7 @@ export default class ContentTop extends React.Component {
 							<Col span={23}>
 								{" "}
 								<h2 className={style.smalltitle} style={{ color: "#464545" }}>
-									Trouvez votre expert en entretien ménager résidentiel,c'est simple!
+									{this.state.language.Text_4}
 								</h2>
 							</Col>
 						</Row>
@@ -102,42 +104,40 @@ export default class ContentTop extends React.Component {
 							<Col span={7}>
 								{" "}
 								<div className={style.category} style={{ marginLeft: "5px", marginTop: "0px" }}>
-									VALIDER VOTRE TARIF
+									{this.state.language.Text_5}
 									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "5px", marginTop: "15px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
 								<div className={style.category} style={{ marginLeft: "4px", marginTop: "9px" }}>
-									CHOISISSEZ VOTRE TODOO
+									{this.state.language.Text_6}
 									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "3px", marginTop: "5px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
 								<div className={style.category} style={{ marginLeft: "7px", marginTop: "10px" }}>
-									RÉSERVEZ EN LIGNE
+									{this.state.language.Text_7}
 								</div>
 							</Col>
 						</Row>
 						<p className={style.content} style={{ color: "#464545" }}>
-							Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié
-							sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.
+							{this.state.language.Text_8}
 						</p>
 						<Row>
 							<Col span={24}>
 								{" "}
 								<h3 className={style.othertitle} style={{ color: "#464545" }}>
-									Devenez client VIP : C'est gratuit et sans engagement!
+									{this.state.language.Text_9}
 								</h3>
 							</Col>
 						</Row>
 						<div className={style.category} style={{ color: "#2880F9" }}>
-							PRÉ-INSCRIPTION : - 20%
+							{this.state.language.Text_10}
 						</div>
 						<p className={style.content} style={{ color: "#464545" }}>
-							Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et
-							recevoir un rabais de 20% sur votre premier ménage.
+							{this.state.language.Text_11}
 						</p>
 
 						<div style={{ paddingTop: "10px", paddingBottom: "50px" }}>
@@ -152,8 +152,8 @@ export default class ContentTop extends React.Component {
 										<Col span={8}>
 											<Form.Item label="Prénom" className="Item">
 												{getFieldDecorator("firstName", {
-													rules: [{ required: true, message: "Le prénom est manquant"}]
-												} )(
+													rules: [{ required: true, message: "Le prénom est manquant" }]
+												})(
 													<Input
 														className="Inputs"
 														placeholder="Votre prénom"
@@ -161,7 +161,7 @@ export default class ContentTop extends React.Component {
 															this.handleChange(e);
 														}}
 														ref={input => (this.myinput = input)}
-												       // suffix={suffix_error}
+														// suffix={suffix_error}
 													/>
 												)}
 											</Form.Item>
@@ -183,7 +183,6 @@ export default class ContentTop extends React.Component {
 												})(
 													<Input
 														className="Inputs"
-														
 														placeholder="Votre courriel"
 														onChange={e => {
 															this.handleChange(e);
@@ -192,7 +191,7 @@ export default class ContentTop extends React.Component {
 														//suffix={suffix_warning}
 													/>
 												)}
-										 
+
 												<span className={style.Formspan}>{isVisible && message_email}</span>
 											</Form.Item>
 										</Col>
