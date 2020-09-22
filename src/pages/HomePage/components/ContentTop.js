@@ -25,6 +25,8 @@ const suffix_warning = (
 	/>
 );
 
+
+
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
@@ -68,7 +70,7 @@ export default class ContentTop extends React.Component {
 					if (data.data.error == "The email is already exist") {
 						this.setState({
 							registerUser: false,
-							message_email: "Ce courriel est déja existant dans la base"
+							message_email: this.state.language.Text_51
 						});
 					}
 				}
@@ -80,14 +82,14 @@ export default class ContentTop extends React.Component {
 		const { getFieldDecorator } = this.props.form;
 		const { message_email } = this.state;
 		const { isVisible } = this.state;
-
+	
 		return (
 			<div>
 				<Row>
 					<Col span={11} offset={1}>
 						<div className={style.title} style={{ color: "#464545" }}>
 							{this.state.language.Text_2}
-							<span className={style.titles}>{this.state.language.Text_3}</span>
+							<span className={style.titles}> {this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
 								oo
 							</span>
@@ -144,19 +146,18 @@ export default class ContentTop extends React.Component {
 							<Form onSubmit={this.handleSubmit} style={{ marginTop: "0px" }}>
 								{this.state.registerUser ? (
 									<div className={style.sucess} style={{ backgroundColor: "#FFFFFF", color: "#2880F9" }}>
-										<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} /> MERCI, vos informations sont
-										enregistrées
+										<Icon type="check" style={{ color: "#28cc8b", fontSize: "35px", marginLeft: "15px", marginTop: "15px", fontWeight: 700 }} /> {this.state.language.Text_33}
 									</div>
 								) : (
 									<Row>
 										<Col span={8}>
-											<Form.Item label="Prénom" className="Item">
+											<Form.Item label={this.state.language.Text_13} className="Item">
 												{getFieldDecorator("firstName", {
-													rules: [{ required: true, message: "Le prénom est manquant" }]
+													rules: [{ required: true, message:  this.state.language.Text_31 }]
 												})(
 													<Input
 														className="Inputs"
-														placeholder="Votre prénom"
+														placeholder={this.state.language.Text_15}
 														onChange={e => {
 															this.handleChange(e);
 														}}
@@ -168,13 +169,13 @@ export default class ContentTop extends React.Component {
 										</Col>
 
 										<Col span={15} offset={1}>
-											<Form.Item label="Courriel" className="Item">
+											<Form.Item label={this.state.language.Text_14} className="Item">
 												{getFieldDecorator("email", {
 													rules: [
-														{ required: true, message: "Le courriel est manquant" },
+														{ required: true, message:  this.state.language.Text_32 },
 														{
 															type: "email",
-															message: "Le  E-mail n'est pas valide"
+															message:  this.state.language.Text_50
 														},
 														{
 															validator: this.handleValidator
@@ -183,7 +184,7 @@ export default class ContentTop extends React.Component {
 												})(
 													<Input
 														className="Inputs"
-														placeholder="Votre courriel"
+														placeholder={this.state.language.Text_16}
 														onChange={e => {
 															this.handleChange(e);
 														}}

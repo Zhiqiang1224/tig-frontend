@@ -2,11 +2,17 @@ import { Button, Col, Form, Input, Row, Icon } from "antd";
 import emploi_entretien_menager_montreal from "../../../assets/emploi_entretien_menager_montreal.svg";
 import style from "../index.less";
 import { Link } from "react-router-dom";
+let storage = window.localStorage;
+import LanguageText from "../../../assets/Langue/Language";
 @Form.create()
 export default class Content extends React.Component {
-	state = {};
-	componentDidMount = async () => {};
+	state = {
+		language: LanguageText.French
+	};
 
+	componentDidMount = async () => {
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+	};
 	render() {
 		return (
 			<div style={{ marginTop: "40px" }}>
@@ -14,7 +20,7 @@ export default class Content extends React.Component {
 					<Row>
 						<Col span={21} offset={1}>
 							<h2 className={style.Mobile_Showtitle} style={{ color: "#FFFFFF" }}>
-							Tiggidoo recherche des préposés à l'entretien ménager. À vos moppes, ready, gOo!
+							{this.state.language.Text_17}
 							</h2>
 						</Col>
 					</Row>
@@ -27,23 +33,22 @@ export default class Content extends React.Component {
 					<Row>
 						<Col span={20} offset={1}>
 							<h3 className={style.Mobile_Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								Devenez un Todoo
+							{this.state.language.Text_18}
 							</h3>
 							<p className={style.Mobile_Showcontent} style={{ color: "#FFFFFF" }}>
-								Gratuit, sans engagement et flexible : Tiggidoo est la solution pour tous les travailleurs autonomes en entretien ménager résidentiel.
+							{this.state.language.Text_19}
 							</p>
 							<h3 className={style.Mobile_Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								C'est vous le patron
+							{this.state.language.Text_20}
 							</h3>
 							<p className={style.Mobile_Showcontent} style={{ color: "#FFFFFF" }}>
-								En tant que Todoo, vous gardez le plein contrôle de votre horaire. Vous recevrez des offres automatiquement selon vos critères, votre secteur et vos disponibilités.
+							{this.state.language.Text_21}
 							</p>
 							<h3 className={style.Mobile_Showsmalltitle} style={{ color: "#FFFFFF" }}>
-								Travaillez mieux, gagnez plus
+							{this.state.language.Text_22}
 							</h3>
 							<p className={style.Mobile_Showcontent} style={{ color: "#FFFFFF" }}>
-								Moins de gestion signifie plus de revenus et de liberté. Vous aurez accès gratuitement à des outils de gestion efficaces pour optimiser votre temps et augmenter vos
-								gains.
+							{this.state.language.Text_23}
 							</p>
 						</Col>
 					</Row>
@@ -51,26 +56,26 @@ export default class Content extends React.Component {
 						<Col span={22} offset={1}>
 							<p className={style.Mobile_ShowcontentList} style={{ color: "#FFFFFF" }}>
 								<Icon type="check" style={{ marginRight: "15px" }} />
-								Inscription gratuite sans engagement
+								{this.state.language.Text_24}
 							</p>
 							<p className={style.Mobile_ShowcontentList} style={{ color: "#FFFFFF" }}>
 								<Icon type="check" style={{ marginRight: "15px" }} />
-								Rémunération minimum réglementée
+								{this.state.language.Text_25}
 							</p>
 							<p className={style.Mobile_ShowcontentList} style={{ color: "#FFFFFF" }}>
 								<Icon type="check" style={{ marginRight: "15px" }} />
-								Paiement sécurisé et garanti
+								{this.state.language.Text_26}
 							</p>
 							<p className={style.Mobile_ShowcontentList} style={{ color: "#FFFFFF" }}>
 								<Icon type="check" style={{ marginRight: "15px" }} />
-								Grande visibilité de vos services
+								{this.state.language.Text_27}
 							</p>
 						</Col>
 					</Row>
 					<div style={{ textAlign: "center", paddingBottom: "40px" }}>
 						<Link to="/Registered">
 							<Button style={{ width: "320px", height: "60px", fontSize: "23px", marginTop: "50px", fontWeight: "600" }} type="primary">
-								Je deviens un Todoo
+							{this.state.language.Text_28}
 							</Button>
 						</Link>
 					</div>

@@ -30,9 +30,9 @@ export default class Header extends React.Component {
 				</Link>
 				<span style={{ float: "right", marginRight: "40px" }}>
 					{storage.languageType == "fr" || storage.languageType == undefined ? (
-						<img src={fr} alt="fr" width="50px" className={style.logo} onClick={this.languageChange} />
+						<img src={en} alt="fr" width="50px" className={style.logo} onClick={this.languageChange} />
 					) : (
-						<img src={en} alt="en" width="50px" className={style.logo} onClick={this.languageChange} />
+						<img src={fr} alt="en" width="50px" className={style.logo} onClick={this.languageChange} />
 					)}
 				</span>
 				<Link to="/Registered">
