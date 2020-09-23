@@ -230,7 +230,7 @@ export default class ContentTop extends React.Component {
 												  transform(char) { return char.toUpperCase() }
 												}
 											  }}
-											mask="111-111-1111"
+											mask="(111)-111-1111"
 										/>
 									)}
 									<span className={style.Formspan} >{message_tel}</span>
