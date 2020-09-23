@@ -3,8 +3,10 @@ import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.s
 import * as service from "../../../service/api";
 import style from "../index.less";
 import Link from "umi/link";
-let storage = window.localStorage;
 import LanguageText from "../../../assets/Langue/Language";
+import MaskedInput from "antd-mask-input";
+
+let storage = window.localStorage;
 const { Search } = Input;
 const formItemLayout = {
 	labelCol: {
@@ -16,6 +18,20 @@ const formItemLayout = {
 		sm: { span: 16 }
 	}
 };
+
+const validatePhone = value => {
+	if (!value) {
+	  return "Required";
+	} else if (
+	  !/^(\+7)?[\s-]?\(?[489][0-9]{2}\)?[\s-]?[0-9]{3}[\s-]?[0-9]{2}[\s-]?[0-9]{2}$/i.test(
+		value
+	  )
+	) {
+	  return "Enter 10 digits";
+	}
+	return undefined;
+  };
+
 @Form.create()
 export default class ContentTop extends React.Component {
 	state = {
@@ -164,12 +180,25 @@ export default class ContentTop extends React.Component {
 							    <Form.Item label={this.state.language.Text_41} className="Item">
 									{getFieldDecorator("lastName", {
 										rules: [{ required: true, message: this.state.language.Text_31 }]
-									})(<Input className="Inputs" placeholder={this.state.language.Text_42} id="error" onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(
+										<Input className="Inputs" 
+											placeholder={this.state.language.Text_42} 
+											id="error" 
+											onChange={(e) => {this.handleChange(e)}} 
+											ref={(input)=> this.myinput = input}
+										/>
+									)}
 								</Form.Item>
 								<Form.Item label={this.state.language.Text_13} className="Item">
 									{getFieldDecorator("firstName", {
 										rules: [{ required: true, message: this.state.language.Text_52 }]
-									})(<Input className="Inputs" placeholder={this.state.language.Text_15} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(
+										<Input className="Inputs" 
+											placeholder={this.state.language.Text_15} 
+											onChange={(e) => {this.handleChange(e)}} 
+											ref={(input)=> this.myinput = input}
+										/>
+									)}
 								</Form.Item>
 								<Form.Item label={this.state.language.Text_14} className="Item">
 									{getFieldDecorator("email", {
@@ -177,13 +206,33 @@ export default class ContentTop extends React.Component {
 											type: 'email', message: this.state.language.Text_50}, {
 												validator: this.handleValidator
 											}]
-									})(<Input className="Inputs" placeholder={this.state.language.Text_16} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input} />)}
+									})(
+										<Input className="Inputs" 
+											placeholder={this.state.language.Text_16} 
+											onChange={(e) => {this.handleChange(e)}} 
+											ref={(input)=> this.myinput = input} 
+										/>
+									)}
 									<span className={style.Formspan} >{message_email}</span>
 								</Form.Item>
 								<Form.Item label={this.state.language.Text_43} className="Item">
 									{getFieldDecorator("telephone", {
 										rules: [{ required: true, message: this.state.language.Text_53 }]
-									})(<Input className="Inputs" placeholder={this.state.language.Text_44} onChange={(e) => {this.handleChange(e)}} ref={(input)=> this.myinput = input}/>)}
+									})(
+										<MaskedInput className="Inputs" 
+											placeholder={this.state.language.Text_44} 
+											onChange={(e) => {this.handleChange(e)}} 
+											ref={(input)=> this.myinput = input}
+
+											formatCharacters={{
+												'W': {
+												  validate(char) { return /\w/.test(char ) },
+												  transform(char) { return char.toUpperCase() }
+												}
+											  }}
+											mask="111-111-1111"
+										/>
+									)}
 									<span className={style.Formspan} >{message_tel}</span>
 								</Form.Item>
 								<div style={{ textAlign: "center", paddingBottom: "40px" }}>
