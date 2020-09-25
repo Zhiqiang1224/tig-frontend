@@ -69,8 +69,9 @@ export default class ContentTop extends React.Component {
 					lastName: values.lastName,
 					email: values.email,
 					telephone: values.telephone,
-					role_id: 1
+					lag: storage.languageType
 				};
+				console.log(p);
 				let data = await service.registerPro(p);
 				console.log(data);
 				if (data.code == 200) {
@@ -95,8 +96,7 @@ export default class ContentTop extends React.Component {
 							message_tel: 	this.state.language.Text_54,
 							message_email: ""
 						});
-					}
-					
+					}					
 				}
 			}
 		});

@@ -24,6 +24,8 @@
     "cross-env": "^7.0.2",
     "jquery": "^3.4.1",
     "md5": "^2.2.1",
+    "react-document-meta": "^3.0.0-beta.2",
+    "react-document-title": "^2.0.3",
     "umi": "^2.9.5"
   }
 }

@@ -8,10 +8,17 @@ import Mobile_ContentTop from "./components/Mobile_ContentTop";
 import Mobile_Content from "./components/Mobile_Content";
 import Mobile_Footer from "./components/Mobile_Footer";
 
+import DocumentMeta from 'react-document-meta';
+import LanguageText from "../../assets/Langue/Language";
+let storage = window.localStorage;
+
+
+
 @Form.create()
 export default class index extends React.Component {
 	state = {
-		flag: true //true为PC端，false为手机端
+		flag: true ,//true为PC端，false为手机端
+		language: LanguageText.French
 	};
 	componentDidMount = async () => {
 		let flag = this.IsPC();
@@ -19,7 +26,9 @@ export default class index extends React.Component {
 		this.setState({
 			flag: flag
 		});
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
 	};
+
 	IsPC = () => {
 		var userAgentInfo = navigator.userAgent;
 		var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
@@ -34,7 +43,20 @@ export default class index extends React.Component {
 	};
 
 	render() {
+		const meta = {
+			title: this.state.language.Text_56,
+			description: this.state.language.Text_57,
+			canonical: 'http://example.com/path/to/page',
+			meta: {
+			  charset: 'utf-8',
+			  name: {
+				keywords: 'tiggidoo, ménager, service de ménage résidentiel'
+			  }
+			}
+		};
+
 		return (
+			<DocumentMeta {...meta}>
 			<div>
 				{this.state.flag == true ? (
 					<div style={{ backgroundColor: "#E8E8E8" }}>
@@ -56,6 +78,7 @@ export default class index extends React.Component {
 					</div>
 				)}
 			</div>
+			</DocumentMeta>
 		);
 	}
 }

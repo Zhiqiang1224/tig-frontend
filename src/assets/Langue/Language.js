@@ -67,7 +67,12 @@ const LanguageText = {
 		Text_53: "Le téléphone est manquant",
 		Text_54: "Ce téléphone est déja existant dans la base",
 
-		Text_55: "ENVOYER"
+		Text_55: "ENVOYER",
+
+		/** meta data */
+		Text_56: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
+		Text_57: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager",
+		Text_58: "Tiggidoo, ménager, service de ménage résidentiel"
 	},
 	En: {
 		/**  page d'accueil */
@@ -134,7 +139,12 @@ const LanguageText = {
 		Text_53: "The phone number is required",
 		Text_54: "This phone is already in the database",
 
-		Text_55: "SEND"
+		Text_55: "SEND",
+
+		/** meta data */
+		Text_56: "Tiggidoo: the platform for housekeeping attendants",
+		Text_57: "Tiggidoo, new residential cleaning service platform! Find a housekeeper, among qualified professionals in housekeeping",
+		Text_58: "tiggidoo, housekeeping, residential cleaning service"
 	}
 };
 export default LanguageText;
