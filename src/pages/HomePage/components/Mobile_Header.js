@@ -24,7 +24,7 @@ export default class Mobile_Header extends React.Component {
 		return (
 			<div style={{ backgroundColor: "#FFFFFF", boxShadow: "0 2px 4px 1px #c7c7c7" }}>
 				<Link to="/">
-					<img src={logo_tiggidoo} alt=" Tiggidoo : l'entretien ménager au Quebec" width="116px" className={style.Mobile_logo} />
+					<img src={logo_tiggidoo} alt={this.state.language.Text_59} width="116px" className={style.Mobile_logo} />
 				</Link>
 				<span style={{ float: "right", marginTop: "35px" }}>
 					<Link to="/Registered">

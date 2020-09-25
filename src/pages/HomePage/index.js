@@ -50,7 +50,7 @@ export default class index extends React.Component {
 			meta: {
 			  charset: 'utf-8',
 			  name: {
-				keywords: 'tiggidoo, ménager, service de ménage résidentiel'
+				keywords: this.state.language.Text_58
 			  }
 			}
 		};

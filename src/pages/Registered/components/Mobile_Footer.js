@@ -23,7 +23,7 @@ export default class Footer extends React.Component {
 			<div style={{ marginTop: "100px" }}>
 				<div style={{ backgroundColor: "#2880F9" }}>
 					<Row style={{ textAlign: "center" }}>
-						<img src={logo_tiggidoo_blanc} alt="Service de ménage à domicile au Quebec" width="129px" style={{ marginTop: "40px" }} />
+						<img src={logo_tiggidoo_blanc} alt={this.state.language.Text_58} width="129px" style={{ marginTop: "40px" }} />
 					</Row>
 					<Row style={{ textAlign: "center" }}>
 						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "50px", fontWeight: 600 }}>{this.state.language.Text_29}</div>
@@ -31,17 +31,17 @@ export default class Footer extends React.Component {
 					<Row style={{ textAlign: "center", marginTop: "20px" }}>
 						<Col span={6} offset={3}>
 							<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
-								<Icon style={{ color: "#ffffff", fontSize: "40px" }} type="facebook" alt="Facebook de Tiggidoo" />
+								<Icon style={{ color: "#ffffff", fontSize: "40px" }} type="facebook" alt={this.state.language.Text_63} />
 							</a>
 						</Col>
 						<Col span={6}>
 							<a href="https://www.linkedin.com/company/tiggidoo">
-								<Icon type="linkedin" alt="Linkedin de Tiggidoo" style={{ color: "#ffffff", fontSize: "40px" }} />
+								<Icon type="linkedin" alt={this.state.language.Text_64} style={{ color: "#ffffff", fontSize: "40px" }} />
 							</a>
 						</Col>
 						<Col span={6}>
 							<a href="https://www.instagram.com/tiggidoo/">
-								<Icon type="instagram" alt=" Instagram de Tiggidoo" style={{ color: "#ffffff", fontSize: "40px" }} />
+								<Icon type="instagram" alt={this.state.language.Text_65} style={{ color: "#ffffff", fontSize: "40px" }} />
 							</a>
 						</Col>
 					</Row>

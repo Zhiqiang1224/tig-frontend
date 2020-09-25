@@ -26,7 +26,7 @@ export default class Header extends React.Component {
 		return (
 			<div style={{ backgroundColor: "#FFFFFF", boxShadow: "0 2px 4px 1px #c7c7c7" }}>
 				<Link to="/">
-					<img src={logo_tiggidoo} alt="Tiggidoo : l'entretien ménager au Quebec " width="116px" className={style.Mobile_logo} />
+					<img src={logo_tiggidoo} alt={this.state.language.Text_56} width="116px" className={style.Mobile_logo} />
 				</Link>
 				<span style={{ float: "right", marginRight: "40px" }}>
 					{storage.languageType == "fr" || storage.languageType == undefined ? (

@@ -26,7 +26,7 @@ export default class Content extends React.Component {
 					</Row>
 					<Row>
 						<Col span={16} offset={4}>
-							<img src={emploi_entretien_menager_montreal} alt="Emploi entretien ménager à Montréal" width="100%" style={{ paddingTop: "80px", paddingBottom: "80px" }} />
+							<img src={emploi_entretien_menager_montreal} alt={this.state.language.Text_61} width="100%" style={{ paddingTop: "80px", paddingBottom: "80px" }} />
 						</Col>
 					</Row>
 

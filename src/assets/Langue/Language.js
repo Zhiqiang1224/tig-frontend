@@ -72,7 +72,16 @@ const LanguageText = {
 		/** meta data */
 		Text_56: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
 		Text_57: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager",
-		Text_58: "Tiggidoo, ménager, service de ménage résidentiel"
+		Text_58: "Tiggidoo, ménager, service de ménage résidentiel",
+
+		/** description of photos */
+		Text_59: "Tiggidoo : l'entretien ménager au Quebec",
+		Text_60: "Trouver une femme de ménage à Montréal",
+		Text_61: "Emploi entretien ménager à Montréal",
+		Text_62: "Service de ménage à domicile au Quebec",
+		Text_63: "Facebook de tiggidoo",
+		Text_64: "Linkedin de Tiggidoo",
+		Text_65: "Instagram de Tiggidoo",
 	},
 	En: {
 		/**  page d'accueil */
@@ -144,7 +153,16 @@ const LanguageText = {
 		/** meta data */
 		Text_56: "Tiggidoo: the platform for housekeeping attendants",
 		Text_57: "Tiggidoo, new residential cleaning service platform! Find a housekeeper, among qualified professionals in housekeeping",
-		Text_58: "tiggidoo, housekeeping, residential cleaning service"
+		Text_58: "tiggidoo, housekeeping, residential cleaning service",
+
+		/** description of photos */
+		Text_59: "Tiggidoo: housekeeping in Quebec",
+		Text_60: "Find a cleaning lady in Montreal",
+		Text_61: "Housekeeping job in Montreal",
+		Text_62: "Home cleaning service in Quebec",
+		Text_63: "Facebook of tiggidoo",
+		Text_64: "Linkedin of Tiggidoo",
+		Text_65: "Instagram of Tiggidoo",
 	}
 };
 export default LanguageText;

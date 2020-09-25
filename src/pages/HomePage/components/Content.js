@@ -19,7 +19,7 @@ export default class Content extends React.Component {
 				<div style={{ backgroundColor: "#2880F9" }}>
 					<Row>
 						<Col span={8} offset={1}>
-							<img src={emploi_entretien_menager_montreal} alt="Emploi entretien ménager à Montréal" width="100%" style={{ paddingTop: "300px", paddingBottom: "90px" }} />
+							<img src={emploi_entretien_menager_montreal} alt={this.state.language.Text_61} width="100%" style={{ paddingTop: "300px", paddingBottom: "90px" }} />
 						</Col>
 						<Col span={11} offset={3}>
 							<h2 className={style.Showtitle} style={{ color: "#FFFFFF", marginBottom:"1px" , textAlign: "left"}}>
