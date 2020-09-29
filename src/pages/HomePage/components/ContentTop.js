@@ -104,24 +104,24 @@ export default class ContentTop extends React.Component {
 								</h2>
 							</Col>
 						</Row>
-						<Row style={{ color: "#2880F9", textAlign: "left", width: "950px" }}>
+						<Row style={{ color: "#2880F9", textAlign: "left", width: "1050px" }}>
 							<Col span={7}>
 								{" "}
 								<div className={style.category} style={{ marginLeft: "5px", marginTop: "0px" }}>
 									{this.state.language.Text_5}
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "5px", marginTop: "15px", fontWeight: 700 }}></Icon>
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "35px", marginTop: "15px", fontWeight: 700}}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category} style={{ marginLeft: "4px", marginTop: "9px" }}>
+								<div className={style.category} style={{ marginLeft: "5px", marginTop: "9px" }}>
 									{this.state.language.Text_6}
-									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "3px", marginTop: "5px", fontWeight: 700 }}></Icon>
+									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "35px", marginTop: "5px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
 							<Col span={8}>
 								{" "}
-								<div className={style.category} style={{ marginLeft: "7px", marginTop: "10px" }}>
+								<div className={style.category} style={{ marginLeft: "20px", marginTop: "10px" }}>
 									{this.state.language.Text_7}
 								</div>
 							</Col>
