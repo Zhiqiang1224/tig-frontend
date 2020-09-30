@@ -119,9 +119,9 @@ export default class ContentTop extends React.Component {
 									<Icon type="arrow-right" style={{ color: "#28cc8b", fontSize: "20px", marginLeft: "35px", marginTop: "5px", fontWeight: 700 }}></Icon>
 								</div>
 							</Col>
-							<Col span={8}>
+							<Col span={6}>
 								{" "}
-								<div className={style.category} style={{ marginLeft: "20px", marginTop: "10px" }}>
+								<div className={style.category} style={{ marginLeft: "5px", marginTop: "10px" }}>
 									{this.state.language.Text_7}
 								</div>
 							</Col>
