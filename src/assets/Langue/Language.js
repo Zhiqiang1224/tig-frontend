@@ -17,9 +17,9 @@ const LanguageText = {
 			"Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et recevoir un rabais de 20% sur votre premier ménage.",
 		Text_12: "Devenez client VIP : C’est gratuit et sans engagement!",
 		Text_13: "Prénom",
-		Text_14: "Curriel",
+		Text_14: "Courriel",
 		Text_15: "Votre prénom",
-		Text_16: "Votre curriel",
+		Text_16: "Votre courriel",
 		// content
 		Text_17: "Tiggidoo recherche des préposés à l'entretien ménager. À vos moppes, ready, gOo!",
 		Text_18: "Devenez un Todoo",
