@@ -5,6 +5,10 @@ import logo_tiggidoo_blanc from "../../../assets/logo_tiggidoo_blanc.svg";
 import style from "../index.less";
 import Plantes from '../../../assets/Plantes.svg'
 
+import facebook from '../../../assets/Facebook_tiggidoo.png';
+import linkedin from '../../../assets/linkedin_tiggidoo.png';
+import instagram from '../../../assets/instagram_tiggidoo.png';
+
 import LanguageText from "../../../assets/Langue/Language";
 let storage = window.localStorage;
 
@@ -34,13 +38,13 @@ export default class Footer extends React.Component {
 						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600 }}>{this.state.language.Text_29}</div>
 						<div style={{ color: "#ffffff", fontSize: "60px" }}>
 						<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
-							<Icon style={{ color: "#ffffff", fontSize: "45px" }} type="facebook" alt={this.state.language.Text_63} />
+						    <img src={facebook} style={{ color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_63}></img>
 						</a>
 						<a href="https://www.linkedin.com/company/tiggidoo">
-						    <Icon  type="linkedin" alt={this.state.language.Text_64} style={{ marginLeft: "20px", color: "#ffffff", fontSize: "45px" }} />
+						    <img src={linkedin} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_64}></img>
 						</a>
 						<a href="https://www.instagram.com/tiggidoo/">
-							<Icon type="instagram" alt={this.state.language.Text_65} style={{ marginLeft: "20px", color: "#ffffff", fontSize: "45px" }} />
+						    <img src={instagram} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_65}></img>
 						</a>
 						</div>
 					</Col>
