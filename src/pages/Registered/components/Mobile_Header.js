@@ -28,7 +28,7 @@ export default class Header extends React.Component {
 				<Link to="/">
 					<img src={logo_tiggidoo} alt={this.state.language.Text_56} width="116px" className={style.Mobile_logo} />
 				</Link>
-				<span style={{ float: "right", marginRight: "40px" }}>
+				<span style={{ float: "right", marginRight: "20px" }}>
 					{storage.languageType == "fr" || storage.languageType == undefined ? (
 						<img src={en} alt="fr" width="25px" className={style.logo} onClick={this.languageChange} />
 					) : (
