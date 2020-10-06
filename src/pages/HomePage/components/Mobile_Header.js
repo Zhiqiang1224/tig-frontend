@@ -32,9 +32,9 @@ export default class Mobile_Header extends React.Component {
 					</Link>
 					<span style={{ marginRight: "20px" }}>
 						{storage.languageType == "fr" || storage.languageType == undefined ? (
-							<img src={en} alt="fr" width="20px" onClick={this.languageChange} />
+							<img src={en} alt="fr" width="25px" onClick={this.languageChange} />
 						) : (
-							<img src={fr} alt="en" width="20px" onClick={this.languageChange} />
+							<img src={fr} alt="en" width="25px" onClick={this.languageChange} />
 						)}
 					</span>
 				</span>
