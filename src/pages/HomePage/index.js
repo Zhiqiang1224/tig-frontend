@@ -59,8 +59,8 @@ export default class index extends React.Component {
 			<DocumentMeta {...meta}>
 			<div>
 				{this.state.flag == true ? (
-					<div style={{ backgroundColor: "#E8E8E8" }}>
-						<Affix offsetTop={0} style={{ backgroundColor: "#E8E8E8" }}>
+					<div style={{ backgroundColor: "#F6F6F6" }}>
+						<Affix offsetTop={0} style={{ backgroundColor: "#F6F6F6" }}>
 							<Header />
 						</Affix>
 						<ContentTop />
@@ -69,7 +69,7 @@ export default class index extends React.Component {
 					</div>
 				) : (
 					<div style={{ backgroundColor: "#F6F6F6" }}>
-						<Affix offsetTop={0} style={{ backgroundColor: "#E8E8E8" }}>
+						<Affix offsetTop={0} style={{ backgroundColor: "#F6F6F6" }}>
 							<Mobile_Header />
 						</Affix>
 						<Mobile_ContentTop />

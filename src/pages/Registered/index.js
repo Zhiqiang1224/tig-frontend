@@ -55,7 +55,7 @@ export default class Registered extends React.Component {
 				{this.state.flag == true ? (
 					<div>
 						<Affix offsetTop={0}>
-							<Header style={{ backgroundColor: "#FFFFFF" }} />
+							<Header style={{ backgroundColor: "#F6F6F6" }} />
 						</Affix>
 						<div style={{ backgroundColor: "#F6F6F6" }}>
 							<ContentTop />
@@ -66,7 +66,7 @@ export default class Registered extends React.Component {
 				) : (
 					<div>
 						<Affix offsetTop={0}>
-							<Mobile_Header style={{ backgroundColor: "#FFFFFF" }} />
+							<Mobile_Header style={{ backgroundColor: "#F6F6F6" }} />
 						</Affix>
 						<Mobile_ContentTop />
 						<Mobile_Footer />
