@@ -76,7 +76,7 @@ const LanguageText = {
 
 		/** description of photos */
 		Text_59: "Tiggidoo : l'entretien ménager au Quebec",
-		Text_60: "Trouver une femme de ménage à Montréal",
+		Text_60: "Trouver un service de ménage à Montréal",
 		Text_61: "Emploi entretien ménager à Montréal",
 		Text_62: "Service de ménage à domicile au Quebec",
 		Text_63: "Facebook de tiggidoo",
@@ -142,22 +142,22 @@ const LanguageText = {
 		Text_49: "HOME",
 
 		/** warning message  */
-		Text_50: "The E-mail is not valid",
+		Text_50: "E-mail is not valid",
 		Text_51: "This email is already in the database",
 		Text_52: "The first name required",
 		Text_53: "The phone number is required",
-		Text_54: "This phone is already in the database",
+		Text_54: "This phone number is already in the database",
 
 		Text_55: "SEND",
 
 		/** meta data */
-		Text_56: "Tiggidoo: the platform for housekeeping attendants",
-		Text_57: "Tiggidoo, new residential cleaning service platform! Find a housekeeper, among qualified professionals in housekeeping",
-		Text_58: "tiggidoo, housekeeping, residential cleaning service",
+		Text_56: "Tiggidoo: the platform for housekeeping",
+		Text_57: "Tiggidoo: new residential cleaning service platform! Find a housekeeper among qualified professionals in housekeeping",
+		Text_58: "tiggidoo: Cleaning - Residential cleaning service",
 
 		/** description of photos */
-		Text_59: "Tiggidoo: housekeeping in Quebec",
-		Text_60: "Find a cleaning lady in Montreal",
+		Text_59: "Tiggidoo: Housekeeping in Quebec",
+		Text_60: "Find a cleaning service in Montreal",
 		Text_61: "Housekeeping job in Montreal",
 		Text_62: "Home cleaning service in Quebec",
 		Text_63: "Facebook of tiggidoo",
