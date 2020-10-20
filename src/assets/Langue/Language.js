@@ -85,9 +85,9 @@ const LanguageText = {
 	},
 	En: {
 		/**  page d'accueil */
-		Text_1: "Become a Todoo",
-		Text_2: "No time,no mood,try Tiggidoo",
-		Text_3: "It's tiggid",
+		Text_1: "BECOME PRO",
+		Text_2: "No time, no mood,",
+		Text_3: "try Tiggid",
 		Text_4: "Find your expert in residential housekeeping in 3 easy clicks.",
 		Text_5: "Validate your rate",
 		Text_6: "Choose your Todoo",
