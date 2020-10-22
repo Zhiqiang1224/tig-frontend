@@ -96,7 +96,7 @@ export default class ContentTop extends React.Component {
 				{this.state.register ? (
 					<Row>
 						<h1 className={style.Mobile_Othertitle} style={{ color: "#2880FB" }}>
-						{this.state.language.Text_46}, {this.state.lastName}
+						{this.state.language.Text_46}, {this.state.firstName}
 						</h1>
 						<h1 className={style.Mobile_Othersmalltitle} style={{ color: "#4D4D4D" }}>
 						{this.state.language.Text_47} <br />
