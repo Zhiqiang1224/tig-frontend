@@ -208,7 +208,7 @@ export default class ContentTop extends React.Component {
 										htmlType="submit"
 										onClick={this.handleClick.bind(this)}
 									>
-										PRE-INSCRIPTION
+										{this.state.language.Text_66}
 									</Button>
 								</div>
 							</Form>

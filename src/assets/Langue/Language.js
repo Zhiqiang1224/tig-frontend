@@ -6,13 +6,13 @@ const LanguageText = {
 		Text_2: "Pas le temps, ni le goût",
 		Text_3: "C’est Tiggid",
 		Text_4: "Trouvez votre expert en entretien ménager résidentiel en 3 clics",
-		Text_5: "VALIDER VOTRE TARIF",
-		Text_6: "CHOISISSEZ VOTRE TODOO",
-		Text_7: "RÉSERVEZ EN LIGNE",
+		Text_5: "Valider votre tarif",
+		Text_6: "Choisissez votre todoo",
+		Text_7: "Réservez en ligne",
 		Text_8:
 			"Découvrez les Todoo, nos spécialistes du ménage prêts à faire briller votre logis, quand vous le voulez, comme vous le voulez. Chaque expert en entretien ménager est trié sur le volet par notre équipe et noté après chaque prestation par des utilisateurs comme vous. Choisissez un ou plusieurs profils préférés et dites adieu aux corvées.",
-		Text_9: "RÉSERVEZ EN LIGNE",
-		Text_10: "PRÉ-INSCRIPTION : - 20%",
+		Text_9: "Réservez en ligne",
+		Text_10: "Pré-inscription : - 20%",
 		Text_11:
 			"Tiggidoo prendra bientôt d'assaut le marché de l'entretien ménager résidentiel dans la grande région de Montréal. Inscrivez-vous dès aujourd’hui pour devenir client VIP et recevoir un rabais de 20% sur votre premier ménage.",
 		Text_12: "Devenez client VIP : C’est gratuit et sans engagement!",
@@ -35,9 +35,9 @@ const LanguageText = {
 		Text_28: "Je deviens un Todoo",
 		// footer
 		Text_29: "SUIVEZ-NOUS",
-		Text_30: "Copiright 2020 Touts droits réservés",
+		Text_30: "Copiright 2020 Tous droits réservés",
 		//  message
-		Text_31: "Le prénom est manquant",
+		Text_31: "Le nom est manquant",
 		Text_32: "Le courriel est manquant",
 		Text_33: "MERCI, vos informations sont enregistrées",
 
@@ -49,7 +49,7 @@ const LanguageText = {
 		Text_37: "Facturation simple et centralisée",
 		Text_38: "Outils de gestion et calendrier intégrés",
 		Text_39: "Soutien professionnel et formations",
-		Text_40: "On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant laissez nous vos coordonnées afin de vous contacter en avant première lors du lancement",
+		Text_40: "On laisse encore un peu de poussière s'accumuler sous les tapis! En attendant, laissez nous vos coordonnées afin de vous contacter en avant première lors du lancement",
 		Text_41: "Nom",
 		Text_42: "Votre Nom",
 		Text_43: "Téléphone",
@@ -82,6 +82,7 @@ const LanguageText = {
 		Text_63: "Facebook de tiggidoo",
 		Text_64: "Linkedin de Tiggidoo",
 		Text_65: "Instagram de Tiggidoo",
+		Text_66: "PRE-INSCRIPTION",
 	},
 	En: {
 		/**  page d'accueil */
@@ -94,8 +95,8 @@ const LanguageText = {
 		Text_7: "Book online",
 		Text_8:
 			"Discover our Todoo team of cleaning specialists who are ready to make your home shine, when and how you want it. Each housekeeping expert is carefully selected by our team and scored after each service by users just like you. Choose one or multiple favorite profiles and say goodbye to chores.",
-		Text_9: "BOOK ONLINE",
-		Text_10: "Pre-registration",
+		Text_9: "Book online",
+		Text_10: "Pre-registration: - 20%",
 		Text_11:
 			"Tiggidoo will soon take on the residential housekeeping market in Montreal. Sign up today to become a VIP client and receive a 20% discount on your first cleaning service.",
 		Text_12: "Become a VIP customer: It's free and without obligation!",
@@ -120,7 +121,7 @@ const LanguageText = {
 		Text_29: "FOLLOW US",
 		Text_30: "Copyright 2020 All rights reserved",
 		//  message
-		Text_31: "The last name is required",
+		Text_31: "The sur name is required",
 		Text_32: "The email is required",
 		Text_33: "THANK YOU, your information is saved",
         /**  form page of register pro  */
@@ -144,7 +145,7 @@ const LanguageText = {
 		/** warning message  */
 		Text_50: "E-mail is not valid",
 		Text_51: "This email is already in the database",
-		Text_52: "The first name required",
+		Text_52: "The first name is required",
 		Text_53: "The phone number is required",
 		Text_54: "This phone number is already in the database",
 
@@ -163,6 +164,7 @@ const LanguageText = {
 		Text_63: "Facebook of tiggidoo",
 		Text_64: "Linkedin of Tiggidoo",
 		Text_65: "Instagram of Tiggidoo",
+		Text_66: "PRE-REGISTRATION",
 	}
 };
 export default LanguageText;
