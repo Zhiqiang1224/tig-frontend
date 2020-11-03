@@ -35,9 +35,9 @@ const LanguageText = {
 		Text_28: "Je deviens un Todoo",
 		// footer
 		Text_29: "SUIVEZ-NOUS",
-		Text_30: "Copiright 2020 Tous droits réservés",
+		Text_30: "Copyright 2020 Tous droits réservés",
 		//  message
-		Text_31: "Le nom est manquant",
+		Text_31: "Le prénom est manquant",
 		Text_32: "Le courriel est manquant",
 		Text_33: "MERCI, vos informations sont enregistrées",
 
