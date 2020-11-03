@@ -35,17 +35,17 @@ export default class Footer extends React.Component {
 						<div style={{ color: "#ffffff", fontSize: "15px", marginTop: "20px" }}>{this.state.language.Text_30}</div>
 					</Col>
 					<Col span={6} offset={4}>
-						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600, marginLeft: "18px" }}>{this.state.language.Text_29}</div>
+						<div style={{ color: "#ffffff", fontSize: "25px", marginTop: "180px", fontWeight: 600, marginLeft: "22px" }}>{this.state.language.Text_29}</div>
 						<div style={{ color: "#ffffff", fontSize: "60px" }}>
-						<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
-						    <img src={facebook} style={{ color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_63}></img>
-						</a>
-						<a href="https://www.linkedin.com/company/tiggidoo">
-						    <img src={linkedin} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_64}></img>
-						</a>
-						<a href="https://www.instagram.com/tiggidoo/">
-						    <img src={instagram} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_65}></img>
-						</a>
+							<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
+								<img src={facebook} style={{ color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_63}></img>
+							</a>
+							<a href="https://www.linkedin.com/company/tiggidoo">
+								<img src={linkedin} style={{ marginLeft: "40px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_64}></img>
+							</a>
+							<a href="https://www.instagram.com/tiggidoo/">
+								<img src={instagram} style={{ marginLeft: "40px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_65}></img>
+							</a>
 						</div>
 					</Col>
 					<Col span={4}>
