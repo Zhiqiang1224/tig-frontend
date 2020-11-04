@@ -144,7 +144,7 @@ export default class ContentTop extends React.Component {
 								<Row>
 									<Form.Item label={this.state.language.Text_13} className="Item">
 										{getFieldDecorator("firstName", {
-											rules: [{ required: true, message: this.state.language.Text_31 }]
+											rules: [{ required: true, message: this.state.language.Text_52 }]
 										})(
 											<Input
 												className="Inputs"
