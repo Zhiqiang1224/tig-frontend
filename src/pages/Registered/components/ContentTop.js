@@ -36,6 +36,7 @@ const validatePhone = value => {
 export default class ContentTop extends React.Component {
 	state = {
 		lastName: '',
+		firstName: '',
 		registerPro: false,
 		message_email: "",
 		message_tel: "",
