@@ -107,13 +107,14 @@ export default class ContentTop extends React.Component {
 		const { message_email } = this.state;
 		const { message_tel } = this.state;
 		const { isVisible } = this.state;
+		const { firstName } = this.state;
 	
 		return (
 			<div>
 				{this.state.registerPro ? (
 					<Row>
 						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-						{this.state.language.Text_46}, {this.state.firstName}
+						{this.state.language.Text_46}, {firstName}
 						</h1>
 						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
 						{this.state.language.Text_47} <br />
