@@ -133,7 +133,7 @@ const LanguageText = {
 		Text_39: "Professional support and training",
 		Text_40: "We are letting the dust settle in for a bit! In the meantime, leave us your contact details so we can reach out as soon as we are ready to launch.",
 		Text_41: "Lastname:",
-		Text_42: "Your Lastname",
+		Text_42: "Your lastname",
 		Text_43: "Phone number:",
 		Text_44: "Your phone number",
 		Text_45: "Join Tiggidoo",
