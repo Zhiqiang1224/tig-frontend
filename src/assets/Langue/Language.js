@@ -100,9 +100,9 @@ const LanguageText = {
 		Text_11:
 			"Tiggidoo will soon take on the residential housekeeping market in Montreal. Sign up today to become a VIP client and receive a 20% discount on your first cleaning service.",
 		Text_12: "Become a VIP customer: It's free and without obligation!",
-		Text_13: "Name",
+		Text_13: "FirstName",
 		Text_14: "Email address",
-		Text_15: "Your name",
+		Text_15: "Your firstname",
 		Text_16: "Your email address",
 		// content
 		Text_17: "Tiggidoo is looking for housekeepers. On your mops, get set, gOo!",
@@ -132,8 +132,8 @@ const LanguageText = {
 		Text_38: "Integrated calendar and management tools",
 		Text_39: "Professional support and training",
 		Text_40: "We are letting the dust settle in for a bit! In the meantime, leave us your contact details so we can reach out as soon as we are ready to launch.",
-		Text_41: "Surname:",
-		Text_42: "Your surname",
+		Text_41: "Lastname:",
+		Text_42: "Your Lastname",
 		Text_43: "Phone number:",
 		Text_44: "Your phone number",
 		Text_45: "Join Tiggidoo",
