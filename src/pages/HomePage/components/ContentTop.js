@@ -90,11 +90,11 @@ export default class ContentTop extends React.Component {
 				<Row>
 					<Col span={11} offset={1}>
 						<div className={style.title} style={{ color: "#464545" }}>
-							{this.state.language.Text_2}
+							<h1  className={style.h1}>{this.state.language.Text_2}
 							<span className={style.titles}> {this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
 								oo
-							</span>
+							</span></h1>
 						</div>
 						<Row>
 							<Col span={23}>

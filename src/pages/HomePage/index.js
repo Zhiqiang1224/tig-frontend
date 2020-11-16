@@ -50,7 +50,8 @@ export default class index extends React.Component {
 			meta: {
 			  charset: 'utf-8',
 			  name: {
-				keywords: this.state.language.Text_58
+				keywords: this.state.language.Text_58,
+				robots: "NOINDEX, NOFOLLOW"
 			  }
 			}
 		};
