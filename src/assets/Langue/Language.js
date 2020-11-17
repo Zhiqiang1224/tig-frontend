@@ -6,7 +6,7 @@ const LanguageText = {
 		Text_2: "La plateforme qui dépoussière l’entretien ménager residentiel ",
 		Text_3: "",
 		Text_4: "Trouvez prochainement votre expert en 3 clics ",
-		Text_5: "Valider votre tarif",
+		Text_5: "Validez votre tarif",
 		Text_6: "Choisissez votre todoo",
 		Text_7: "Réservez en ligne",
 		Text_8:
