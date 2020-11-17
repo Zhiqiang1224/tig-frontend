@@ -93,7 +93,7 @@ export default class ContentTop extends React.Component {
 							<h1  className={style.h1}>{this.state.language.Text_2}
 							<span className={style.titles}> {this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
-								oo
+								
 							</span></h1>
 						</div>
 						<Row>

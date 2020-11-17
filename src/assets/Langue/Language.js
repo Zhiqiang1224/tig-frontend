@@ -3,9 +3,9 @@ const LanguageText = {
 		/**  page d'accueil */
 		// content top
 		Text_1: "DEVENIR PRO",
-		Text_2: "Pas le temps, ni le goût",
-		Text_3: "C’est Tiggid",
-		Text_4: "Trouvez votre expert en entretien ménager résidentiel en 3 clics",
+		Text_2: "La plateforme qui dépoussière l’entretien ménager residentiel ",
+		Text_3: "",
+		Text_4: "Trouvez prochainement votre expert en 3 clics ",
 		Text_5: "Valider votre tarif",
 		Text_6: "Choisissez votre todoo",
 		Text_7: "Réservez en ligne",
@@ -87,9 +87,9 @@ const LanguageText = {
 	En: {
 		/**  page d'accueil */
 		Text_1: "BECOME PRO",
-		Text_2: "No time, no mood,",
-		Text_3: "try Tiggid",
-		Text_4: "Find your expert in residential housekeeping in 3 easy clicks",
+		Text_2: "The platform that dust off residential housekeeping",
+		Text_3: "",
+		Text_4: "Find you expert soon in 3 easy clicks",
 		Text_5: "Validate your rate",
 		Text_6: "Choose your Todoo",
 		Text_7: "Book online",

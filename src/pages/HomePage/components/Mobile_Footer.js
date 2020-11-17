@@ -34,19 +34,19 @@ export default class Footer extends React.Component {
 					</Row>
 					<Row style={{ textAlign: "center", marginTop: "20px" }}>
 						<Col span={6} offset={3}>
-							<a href="https://www.facebook.com/Tiggidoo-106384241156285/">
+							
 							     <img src={facebook} style={{ color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_63}></img>
-							</a>
+							
 						</Col>
 						<Col span={6}>
-							<a href="https://www.linkedin.com/company/tiggidoo">
+							
 							     <img src={linkedin} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_64}></img>
-							</a>
+							
 						</Col>
 						<Col span={6}>
-							<a href="https://www.instagram.com/tiggidoo/">
+							
 						    	<img src={instagram} style={{ marginLeft: "23px", color: "#ffffff", fontSize: "40px" }} alt={this.state.language.Text_65}></img>
-							</a>
+							
 						</Col>
 					</Row>
 					<Row style={{ textAlign: "center" }}>
