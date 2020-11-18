@@ -6,12 +6,6 @@ export default {
 			{
 				antd: true,
 				title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
-				metas: [
-					{
-						charset: "utf-8",
-						description: "Tiggidoo, nouvelle plateforme de service de ménage résidentiel! Trouvez une aide ménagère, parmi les professionnels qualifiés en entretien ménager"
-					}
-				],
 				links: [{ rel: "shortcut icon", href: "/favicon.ico" }]
 			}
 		]

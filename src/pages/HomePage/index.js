@@ -46,9 +46,8 @@ export default class index extends React.Component {
 		const meta = {
 			title: this.state.language.Text_56,
 			description: this.state.language.Text_57,
-			canonical: 'http://example.com/path/to/page',
+			canonical: 'http://www.tiggidoo.com',
 			meta: {
-			  charset: 'utf-8',
 			  name: {
 				keywords: this.state.language.Text_58
 			  }

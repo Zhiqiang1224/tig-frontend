@@ -64,13 +64,13 @@ export default class ContentTop extends React.Component {
 			<div>
 				<Row>
 					<Col span={22} offset={1}>
-						<div className={style.Mobile_title} style={{ color: "#464545" }}>
-							<h1 className={style.h2}>{this.state.language.Text_2}
+						<h1 className={style.Mobile_title}>
+							{this.state.language.Text_2}
 							<span className={style.Mobile_title_big}> {this.state.language.Text_3}</span>
 							<span className={style.Mobile_title_big} style={{ color: "#28cc8b" }}>
 								
-							</span></h1>
-						</div>
+							</span>
+						</h1>
 					</Col>
 				</Row>
 				<Row>
