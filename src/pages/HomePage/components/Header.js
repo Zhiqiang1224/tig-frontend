@@ -18,6 +18,7 @@ export default class Header extends React.Component {
 	};
 
 	languageChange = () => {
+		console.log(storage.languageType);
 		storage.languageType == "fr" ? (this.setState({ languageType: "En" }), (storage["languageType"] = "En")) : (this.setState({ languageType: "fr" }), (storage["languageType"] = "fr"));
 		location.reload();
 	};

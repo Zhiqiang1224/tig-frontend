@@ -29,11 +29,11 @@ export default class ContentTop extends React.Component {
 		e.preventDefault();
 		this.props.form.validateFieldsAndScroll(async (err, values) => {
 			if (!err) {
-				console.log("Received values of form: ", values);
 				let p = {
 					firstName: values.firstName,
 					email: values.email
 				};
+				console.log("Received values of form: ", p);
 				let data = await service.registerUser(p);
 				console.log(data);
 				if (data.code == 200) {
