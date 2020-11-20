@@ -14,11 +14,13 @@ export default class Header extends React.Component {
 		language: LanguageText.French
 	};
 	componentDidMount = async () => {
+		console.log("componentDidMount: ", storage.languageType);
 		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
 		window.scrollTo(0, 0);
 	};
 
 	languageChange = () => {
+		console.log("languageChange: ", storage.languageType);
 		storage.languageType == "fr" ? (this.setState({ languageType: "En" }), (storage["languageType"] = "En")) : (this.setState({ languageType: "fr" }), (storage["languageType"] = "fr"));
 		location.reload();
 	};
