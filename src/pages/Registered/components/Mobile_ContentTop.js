@@ -40,7 +40,8 @@ export default class ContentTop extends React.Component {
 	}
 
 	componentDidMount = async () => {
-		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+		//storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
+		storage.languageType == "En" ? (this.setState({ language: LanguageText.En }), (storage["languageType"] = "En")) : (this.setState({ language: LanguageText.French }), (storage["languageType"] = "fr"));
 	};
 
 	handleSubmit = async e => {
