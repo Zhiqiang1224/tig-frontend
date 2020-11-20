@@ -14,7 +14,7 @@ export default class Header extends React.Component {
 	};
 	componentDidMount = async () => {
 		console.log("componentDidMount: ", storage.languageType);
-		storage.languageType == "fr" ? this.setState({ language: LanguageText.French }) : this.setState({ language: LanguageText.En });
+		storage.languageType == "En" ? this.setState({ language: LanguageText.En }) : this.setState({ language: LanguageText.French });
 		window.scrollTo(0, 0);
 	};
 
