@@ -5,9 +5,9 @@ export default {
 			"umi-plugin-react",
 			{
 				antd: true,
-				title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
-				links: [{ rel: "shortcut icon", href: "/favicon.ico" }],
-				links: [{ rel: "canonical", href: "https://www.tiggidoo.com" }]
+				title: "Tiggidoo: the platform for housekeeping",
+				metas: [{ description: "Tiggidoo: new residential cleaning service platform! Find a housekeeper among qualified professionals in housekeeping", keywords : "Tiggidoo, ménager, service de ménage résidentiel" }],
+				links: [{ rel: "canonical", href: "https://www.tiggidoo.com/" }]
 			}
 		]
 	],
@@ -24,12 +24,12 @@ export default {
 	routes: [
 		{
 			path: "/",
-			title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
+			title: "Tiggidoo: the platform for housekeeping",
 			component: "HomePage/index"
 		},
 		{
 			path: "/Registered",
-			title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
+			title: "Tiggidoo: the platform for housekeeping",
 			component: "Registered/index"
 		}
 	],

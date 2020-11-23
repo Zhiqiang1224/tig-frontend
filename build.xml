@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="the project" default="compile" basedir=".">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://www.example.com/</loc>
+        <lastmod>2005-01-01</lastmod>
+    </url>
+</urlset> 
+
+<target name="update-sitemap" description="update the update date">
+    <xmltask source="war/sitemap.xml" dest="war/newsitemap.xml" report="true">
+        <replace path="/:urlset/:url/:lastmod/text()" withText="new text"/>
+    </xmltask>
+</target>
+
+</project>

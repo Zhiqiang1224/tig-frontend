@@ -44,11 +44,11 @@ export default class index extends React.Component {
 
 	render() {
 		const meta = {
-			title: this.state.language.Text_56,
+			//title: this.state.language.Text_56,
 			meta: {
 			  name: {
-				description: this.state.language.Text_57,
-				keywords: this.state.language.Text_58
+			//	description: this.state.language.Text_57,
+			//	keywords: this.state.language.Text_58
 			  }
 			}
 		};
