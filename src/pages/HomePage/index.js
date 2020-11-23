@@ -45,10 +45,10 @@ export default class index extends React.Component {
 	render() {
 		const meta = {
 			title: this.state.language.Text_56,
-			description: this.state.language.Text_57,
 			canonical: 'http://www.tiggidoo.com',
 			meta: {
 			  name: {
+				description: this.state.language.Text_57,
 				keywords: this.state.language.Text_58
 			  }
 			}
