@@ -6,7 +6,8 @@ export default {
 			{
 				antd: true,
 				title: "Tiggidoo : la plateforme des préposés à l'entretien ménager",
-				links: [{ rel: "shortcut icon", href: "/favicon.ico" }]
+				links: [{ rel: "shortcut icon", href: "/favicon.ico" }],
+				links: [{ rel: "canonical", href: "https://www.tiggidoo.com" }]
 			}
 		]
 	],

@@ -39,7 +39,6 @@ export default class Registered extends React.Component {
 	render() {
 		const meta = {
 			title: this.state.language.Text_56,
-			canonical: 'http://www.tiggidoo.com',
 			meta: {
 			  name: {
 				description: this.state.language.Text_57,
