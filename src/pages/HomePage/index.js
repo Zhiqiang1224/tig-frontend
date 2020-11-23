@@ -9,6 +9,7 @@ import Mobile_Content from "./components/Mobile_Content";
 import Mobile_Footer from "./components/Mobile_Footer";
 
 import DocumentMeta from 'react-document-meta';
+import MetaTags from 'react-meta-tags';
 import LanguageText from "../../assets/Langue/Language";
 let storage = window.localStorage;
 
@@ -54,8 +55,11 @@ export default class index extends React.Component {
 		};
 
 		return (
-			<DocumentMeta {...meta}>
 			<div>
+				<MetaTags>
+					<title>{this.state.language.Text_56}</title>
+					<meta name="description" content={this.state.language.Text_57} />
+				</MetaTags>
 				{this.state.flag == true ? (
 					<div style={{ backgroundColor: "#F6F6F6" }}>
 						<Affix offsetTop={0} style={{ backgroundColor: "#F6F6F6" }}>
@@ -76,7 +80,7 @@ export default class index extends React.Component {
 					</div>
 				)}
 			</div>
-			</DocumentMeta>
+
 		);
 	}
 }
