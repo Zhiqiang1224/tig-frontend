@@ -89,7 +89,7 @@ export default class ContentTop extends React.Component {
 			<div>
 				<Row>
 					<Col span={11} offset={1}>
-						<h1 className={style.title}>
+						<h1 >
 							{this.state.language.Text_2}
 							<span className={style.titles}> {this.state.language.Text_3}</span>
 							<span className={style.titles} style={{ color: "#28cc8b" }}>
@@ -99,9 +99,11 @@ export default class ContentTop extends React.Component {
 						<Row>
 							<Col span={23}>
 								{" "}
-								<h2 className={style.smalltitle} style={{ color: "#464545" }}>
-									{this.state.language.Text_4}
-								</h2>
+								<div className={style.Contenttoptitle}>
+									<h2>
+										{this.state.language.Text_4}
+									</h2>
+								</div>
 							</Col>
 						</Row>
 						<Row style={{ color: "#2880F9", textAlign: "left", width: "1050px" }}>
@@ -132,9 +134,9 @@ export default class ContentTop extends React.Component {
 						<Row>
 							<Col span={24}>
 								{" "}
-								<h3 className={style.othertitle} style={{ color: "#464545" }}>
+								<span className={style.othertitle} style={{ color: "#464545" }}>
 									{this.state.language.Text_9}
-								</h3>
+								</span>
 							</Col>
 						</Row>
 						<div className={style.category} style={{ color: "#2880F9" }}>

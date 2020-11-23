@@ -32,7 +32,8 @@ export default class ContentTop extends React.Component {
 			if (!err) {
 				let p = {
 					firstName: values.firstName,
-					email: values.email
+					email: values.email,
+					lag: storage.languageType
 				};
 				console.log("Received values of form: ", p);
 				let data = await service.registerUser(p);

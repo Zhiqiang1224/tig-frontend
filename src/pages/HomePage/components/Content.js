@@ -21,26 +21,28 @@ export default class Content extends React.Component {
 						<Col span={8} offset={1}>
 							<img src={emploi_entretien_menager_montreal} alt={this.state.language.Text_61} width="100%" style={{ paddingTop: "300px", paddingBottom: "90px" }} />
 						</Col>
-						<Col span={11} offset={3}>
-							<h2 className={style.Showtitle} style={{ color: "#FFFFFF", marginBottom:"1px" , textAlign: "left"}}>
-							{this.state.language.Text_17}
-							 </h2>
+						<Col span={11} offset={3} >
+							<div className={style.Contenttitle}>
+								<h2>
+								{this.state.language.Text_17}
+								</h2>
+							 </div>
                          </Col>
 						<Col span={11} offset={3}>
 							
-							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
+							<h3 >
 							{this.state.language.Text_18}
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
 							{this.state.language.Text_19}
 							</p>
-							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
+							<h3 >
 							{this.state.language.Text_20}
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
 							{this.state.language.Text_21}
 							</p>
-							<h3 className={style.Showsmalltitle} style={{ color: "#FFFFFF" }}>
+							<h3 >
 							{this.state.language.Text_22}
 							</h3>
 							<p className={style.Showcontent} style={{ color: "#FFFFFF" }}>
