@@ -83,6 +83,7 @@ const LanguageText = {
 		Text_64: "Linkedin de Tiggidoo",
 		Text_65: "Instagram de Tiggidoo",
 		Text_66: "PRE-INSCRIPTION",
+		Text_67: "Le numéro de téléphone n'est pas valide",
 	},
 	En: {
 		/**  page d'accueil */
@@ -165,6 +166,7 @@ const LanguageText = {
 		Text_64: "Linkedin of Tiggidoo",
 		Text_65: "Instagram of Tiggidoo",
 		Text_66: "PRE-REGISTRATION",
+		Text_67: "The telephone number is not valid",
 	}
 };
 export default LanguageText;

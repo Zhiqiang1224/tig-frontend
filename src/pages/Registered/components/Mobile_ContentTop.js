@@ -3,6 +3,7 @@ import menage_domicile_montreal from "../../../assets/menage_domicile_montreal.s
 import * as service from "../../../service/api";
 import style from "../index.less";
 import Link from "umi/link";
+import MaskedInput from "antd-mask-input";
 
 import LanguageText from "../../../assets/Langue/Language";
 let storage = window.localStorage;
@@ -76,6 +77,14 @@ export default class ContentTop extends React.Component {
 						});
 					}
 
+					if(data.data.error == "The telephone number is not valid"){
+                        this.setState({
+							registerPro: false,
+							message_tel: 	this.state.language.Text_67,
+							message_email: ""
+						});
+					}			
+
 					if (data.data.error == "The telephone is already exist") {
 						this.setState({
 							register: false,
@@ -98,13 +107,13 @@ export default class ContentTop extends React.Component {
 			<div>
 				{this.state.register ? (
 					<Row>
-						<h1 className={style.Mobile_Othertitle} style={{ color: "#2880FB" }}>
-						{this.state.language.Text_46}, {this.state.firstName}
-						</h1>
-						<h1 className={style.Mobile_Othersmalltitle} style={{ color: "#4D4D4D" }}>
-						{this.state.language.Text_47} <br />
-						{this.state.language.Text_48}
-						</h1>
+						<div className={style.Mobile_Othertitle} style={{ color: "#2880FB" }}>
+						   {this.state.language.Text_46}
+						</div>
+						<div className={style.Mobile_Othersmalltitle} style={{ color: "#4D4D4D" }}>
+								{this.state.language.Text_47} <br />
+								{this.state.language.Text_48}
+						</div>
 						<div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
 							{" "}
 							<Link to="/">
@@ -117,9 +126,9 @@ export default class ContentTop extends React.Component {
 						<Row>
 							<Col span={22} offset={1}>
 								{" "}
-								<h1 className={style.Mobile_title} style={{ color: "#464545" }}>
+								<div className={style.Mobile_title} style={{ color: "#464545" }}>
 							 	{this.state.language.Text_34}
-								</h1>
+								</div>
 							</Col>
 						</Row>
 
@@ -222,14 +231,19 @@ export default class ContentTop extends React.Component {
 										{getFieldDecorator("telephone", {
 											rules: [{ required: true, message: this.state.language.Text_53 }]
 										})(
-											<Input
-												className="Inputs"
-												placeholder={this.state.language.Text_44}
-												onChange={e => {
-													this.handleChange(e);
-												}}
-												ref={input => (this.myinput = input)}
-											/>
+											<MaskedInput className="Inputs" 
+											placeholder={this.state.language.Text_44} 
+											onChange={(e) => {this.handleChange(e)}} 
+											ref={(input)=> this.myinput = input}
+
+											formatCharacters={{
+												'W': {
+												  validate(char) { return /\w/.test(char ) },
+												  transform(char) { return char.toUpperCase() }
+												}
+											  }}
+											mask="(111)-111-1111"
+										/>
 										)}
 										<span className={style.Formspan}>{message_tel}</span>
 									</Form.Item>

@@ -92,6 +92,14 @@ export default class ContentTop extends React.Component {
 						});
 					}
 
+					if(data.data.error == "The telephone number is not valid"){
+                        this.setState({
+							registerPro: false,
+							message_tel: 	this.state.language.Text_67,
+							message_email: ""
+						});
+					}			
+
 					if(data.data.error == "The telephone is already exist"){
                         this.setState({
 							registerPro: false,
@@ -115,13 +123,13 @@ export default class ContentTop extends React.Component {
 			<div>
 				{this.state.registerPro ? (
 					<Row>
-						<h1 className={style.Othertitle} style={{ color: "#2880FB" }}>
-						{this.state.language.Text_46} 
-						</h1>
-						<h1 className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
+						<div className={style.Othertitle} style={{ color: "#2880FB" }}>
+						   {this.state.language.Text_46} 
+						</div>
+						<div className={style.Othersmalltitle} style={{ color: "#4D4D4D" }}>
 						{this.state.language.Text_47} <br />
 						{this.state.language.Text_48}
-						</h1>
+						</div>
 						<div style={{ textAlign: "center", marginTop: "50px", marginBottom: "50px" }}>
 							{" "}
 							<Link to="/">
@@ -226,7 +234,7 @@ export default class ContentTop extends React.Component {
 											placeholder={this.state.language.Text_44} 
 											onChange={(e) => {this.handleChange(e)}} 
 											ref={(input)=> this.myinput = input}
-
+                                            
 											formatCharacters={{
 												'W': {
 												  validate(char) { return /\w/.test(char ) },

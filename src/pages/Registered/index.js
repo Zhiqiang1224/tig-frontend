@@ -7,6 +7,7 @@ import Mobile_ContentTop from "./components/Mobile_ContentTop";
 import Mobile_Footer from "./components/Mobile_Footer";
 
 import DocumentMeta from 'react-document-meta';
+import MetaTags from 'react-meta-tags';
 import LanguageText from "../../assets/Langue/Language";
 let storage = window.localStorage;
 
@@ -37,20 +38,13 @@ export default class Registered extends React.Component {
 		return flag;
 	};
 	render() {
-		const meta = {
-			//title: this.state.language.Text_56,
-			meta: {
-			  name: {
-				//description: this.state.language.Text_57,
-				//keywords: this.state.language.Text_58,
-				robots: "NOINDEX, NOFOLLOW"
-			  }
-			}
-		};
-
-		return (
-			<DocumentMeta {...meta}>
+		return (			
 			<div>
+			    <MetaTags>
+					<title>{this.state.language.Text_56}</title>
+					<meta name="description" content={this.state.language.Text_57} />
+					<meta name="robots" content="NOINDEX, NOFOLLOW" />
+				</MetaTags>
 				{this.state.flag == true ? (
 					<div>
 						<Affix offsetTop={0}>
@@ -72,7 +66,6 @@ export default class Registered extends React.Component {
 					</div>
 				)}
 			</div>
-			</DocumentMeta>
 		);
 	}
 }
