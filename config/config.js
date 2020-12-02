@@ -6,7 +6,6 @@ export default {
 			{
 				antd: true,
 				title: "Tiggidoo: the platform for housekeeping",
-				//metas: [{ description: "Tiggidoo: new residential cleaning service platform! Find a housekeeper among qualified professionals in housekeeping", keywords : "Tiggidoo, ménager, service de ménage résidentiel" }],
 				links: [{ rel: "canonical", href: "https://www.tiggidoo.com/" }]
 			}
 			

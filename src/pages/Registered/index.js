@@ -6,8 +6,7 @@ import Mobile_Header from "./components/Mobile_Header";
 import Mobile_ContentTop from "./components/Mobile_ContentTop";
 import Mobile_Footer from "./components/Mobile_Footer";
 
-import DocumentMeta from 'react-document-meta';
-import MetaTags from 'react-meta-tags';
+import {Helmet} from "react-helmet";
 import LanguageText from "../../assets/Langue/Language";
 let storage = window.localStorage;
 
@@ -40,11 +39,11 @@ export default class Registered extends React.Component {
 	render() {
 		return (			
 			<div>
-			    <MetaTags>
+				<Helmet>
 					<title>{this.state.language.Text_56}</title>
 					<meta name="description" content={this.state.language.Text_57} />
 					<meta name="robots" content="NOINDEX, NOFOLLOW" />
-				</MetaTags>
+                </Helmet>
 				{this.state.flag == true ? (
 					<div>
 						<Affix offsetTop={0}>

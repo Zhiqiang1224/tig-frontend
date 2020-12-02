@@ -8,8 +8,7 @@ import Mobile_ContentTop from "./components/Mobile_ContentTop";
 import Mobile_Content from "./components/Mobile_Content";
 import Mobile_Footer from "./components/Mobile_Footer";
 
-import DocumentMeta from 'react-document-meta';
-import MetaTags from 'react-meta-tags';
+import {Helmet} from "react-helmet";
 import LanguageText from "../../assets/Langue/Language";
 let storage = window.localStorage;
 
@@ -46,10 +45,10 @@ export default class index extends React.Component {
 	render() {
 		return (
 			<div>
-				<MetaTags>
+				<Helmet>
 					<title>{this.state.language.Text_56}</title>
 					<meta name="description" content={this.state.language.Text_57} />
-				</MetaTags>
+                </Helmet>
 				{this.state.flag == true ? (
 					<div style={{ backgroundColor: "#F6F6F6" }}>
 						<Affix offsetTop={0} style={{ backgroundColor: "#F6F6F6" }}>
