@@ -142,7 +142,7 @@ export default class ContentTop extends React.Component {
 						<Col span={11} offset={1}>
 							<Row>
 								<h1 className={style.title} style={{ color: "#464545" }}>
-								{this.state.language.Text_34}
+							    	{this.state.language.Text_34}
 								</h1>
 							</Row>
 							<Row>
@@ -151,7 +151,7 @@ export default class ContentTop extends React.Component {
 									<Row>
 										<Col span={30}>
 										<h3 className={style.smalltitle} style={{ color: "#2880F9", fontWeight:"bold" }}>
-										{this.state.language.Text_35}
+									     	{this.state.language.Text_35}
 										</h3>
 										</Col>
 									</Row>
